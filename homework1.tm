@@ -1,9 +1,13 @@
-<TeXmacs|1.99.6>
+<TeXmacs|1.99.5>
 
 <style|generic>
 
 <\body>
-  <doc-data|<doc-title|AMA>>
+  <doc-data|<doc-title|Math Stat Practice
+  I>|<doc-author|<author-data|<author-name|Yuejian
+  11510511>|<\author-affiliation>
+    <date|>
+  </author-affiliation>>>>
 
   <section|Part I>
 
@@ -113,30 +117,51 @@
 
   1.6
 
+  <\enumerate-alpha>
+    <item><math|Pr<around*|(|1/4\<less\>X\<less\>5/8|)>=Pr<around*|(|X\<less\>5/8|)>-Pr<around*|(|X\<less\>1/4|)>=1-2<around*|(|1-5/8|)><rsup|2>-2<around*|(|<frac|1|4>|)><rsup|2>=<frac|19|32>>
+
+    <item><math|f<around*|(|x|)>=F<rprime|'><around*|(|x|)>=<around*|{|<tabular|<tformat|<table|<row|<cell|0>|<cell|x\<less\>0>>|<row|<cell|4x>|<cell|0\<leqslant\>x\<less\>1/2>>|<row|<cell|-4<around*|(|x-1|)>>|<cell|1/2\<leqslant\>x\<less\>3/4>>|<row|<cell|0>|<cell|3/4\<leqslant\>x>>>>>|\<nobracket\>>>
+
+    \;
+
+    <math|Var<around*|(|X|)>=E<around*|(|X<rsup|2>|)>-E<around*|(|X|)><rsup|2>=<big|int><rsup|\<infty\>><rsub|-\<infty\>>x<rsup|2>
+    f<around*|(|x|)>d x-<around*|(|<big|int><rsub|-\<infty\>><rsup|\<infty\>>x
+    f<around*|(|x|)>d x|)><rsup|2>=<frac|11|16>-<frac|11<rsup|2>|48<rsup|2>>\<cong\>0.635>
+
+    \;
+  </enumerate-alpha>
+
   1.10
+
+  \;
 
   <section|Part II>
 </body>
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?>>
-    <associate|auto-2|<tuple|1|?>>
-    <associate|auto-3|<tuple|2|?>>
-    <associate|auto-4|<tuple|2|?>>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-2|<tuple|1|1>>
+    <associate|auto-3|<tuple|2|2>>
+    <associate|auto-4|<tuple|2|2>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|table>
-      <tuple|normal|<surround|<hidden|<tuple>>||>|<pageref|auto-1>>
+      <tuple|normal||<pageref|auto-2>>
 
-      <tuple|normal|<surround|<hidden|<tuple>>||>|<pageref|auto-2>>
+      <tuple|normal||<pageref|auto-3>>
+    </associate>
+    <\associate|toc>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Part
+      I> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <tuple|normal|<surround|<hidden|<tuple>>||>|<pageref|auto-3>>
-
-      <tuple|normal|<surround|<hidden|<tuple>>||>|<pageref|auto-4>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Part
+      II> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
