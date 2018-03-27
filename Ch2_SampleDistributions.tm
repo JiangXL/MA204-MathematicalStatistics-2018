@@ -3,9 +3,11 @@
 <style|generic>
 
 <\body>
-  <doc-data|<doc-title|Chapter 2. Sampling Distributions>>
-
-  \ 
+  <doc-data|<doc-title|Chapter 2. Sampling
+  Distributions>|<doc-author|<author-data|<author-name|yuejian
+  mo>|<\author-affiliation>
+    <date|>
+  </author-affiliation>>>>
 
   <section|Distribution of the Function of Random Varables>
 
@@ -144,12 +146,16 @@
 
   <subsection|Order Statistics>
 
-  <\math>
-    X<rsub|<around*|(|1|)>>,X<rsub|<around*|(|2|)>>,\<cdots\>X<rsub|<around*|(|n|)>>
-  </math>
-
-  \ are called the <with|font-series|bold|<with|font-shape|italic|order
-  statistics>>\ 
+  Here are random sample: <math|X<rsub|1>,\<ldots\>.X<rsub|n>\<sim\><rsup|iid>F<around*|(|\<cdot\>|)>>,
+  and <math|f<around*|(|\<cdot\>|)>> is the pdf. Let
+  <math|X<rsub|<around*|(|1|)>>=min*<around*|(|X<rsub|1>,X<rsub|2,\<cdots\>,X<rsub|n>>|)>>
+  be the samllest of <math|X<rsub|1>,X<rsub|2>,\<cdots\>,X<rsub|n>;X<rsub|<around*|(|2|)>>>
+  be the second samllest of <math|X<rsub|1>,X<rsub|2>,\<cdots\>,X<rsub|n>>.
+  <math|X<rsub|<around*|(|n|)>>=max<around*|(|X<rsub|1>,\<cdots\>,X<rsub|n>|)>
+  >be the largest of all random sample. <math|X<rsub|<around*|(|1|)>>,X<rsub|<around*|(|2|)>>,\<cdots\>,X<rsub|<around*|(|n|)>>>
+  are called the <with|font-series|bold|<with|font-shape|italic|order
+  statistics>> and <math|X<rsub|<around*|(|r|)>>> is called the <math|r-th>
+  <with|font-shape|italic|orther statistic> for <math|r=1,\<cdots\>,n.>
 
   <math|x<rsub|<around*|(|1|)>>,x<rsub|<around*|(|2|)>>,\<cdots\>x<rsub|<around*|(|n|)>>>
   is the realization of <math|X<rsub|<around*|(|1|)>>,X<rsub|<around*|(|2|)>>,\<cdots\>X<rsub|<around*|(|n|)>>>
@@ -174,6 +180,31 @@
 
   <subsection|Limit Theorems>
 
+  <subsubsection|>
+
+  <subsubsection|>
+
+  <subsubsection|Central limit therorem>
+
+  <with|font-series|bold|Therorem 2.9> (Central limit theorem). Let
+  <math|<around*|{|X<rsub|n>|}><rsub|n=1><rsup|\<infty\>>> be a sequence of
+  i.i.d. random variables with common mean <math|\<mu\>> and common variance
+  <math|\<sigma\><rsup|2>\<gtr\>0>. Let <math|<wide|X|\<bar\>>=<big|sum><rsub|i=1><rsup|n>X<rsub|i>/n>
+  and <math|Y<rsub|n>=<sqrt|n><around*|(|<wide|X<rsub|n>|\<bar\>>-\<mu\>|)>/\<sigma\>>,
+  then <math|Y<rsub|n><rsup|>\<longrightarrow\><rsup|L>Z > as
+  <math|n\<longrightarrow\>\<infty\>>, where
+  <math|Z\<sim\>N<around*|(|0,1|)>.>
+
+  Proof:
+
+  <\equation*>
+    M<around*|(|t;n|)>=E<around*|(|e<rsup|tY<rsub|n>>|)>
+  </equation*>
+
+  <subsubsection|Some Challenging Questions>
+
+  \;
+
   <section|Reference>
 
   Wikipedia, note from SUSTech
@@ -188,10 +219,14 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|2.3.2|?>>
-    <associate|auto-11|<tuple|2.4|?>>
-    <associate|auto-12|<tuple|2.5|?>>
-    <associate|auto-13|<tuple|3|?>>
+    <associate|auto-10|<tuple|2.3.2|2>>
+    <associate|auto-11|<tuple|2.4|2>>
+    <associate|auto-12|<tuple|2.5|3>>
+    <associate|auto-13|<tuple|2.5.1|3>>
+    <associate|auto-14|<tuple|2.5.2|?>>
+    <associate|auto-15|<tuple|2.5.3|?>>
+    <associate|auto-16|<tuple|2.5.4|?>>
+    <associate|auto-17|<tuple|3|?>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|2|1>>
     <associate|auto-4|<tuple|2.1|1>>
@@ -241,9 +276,25 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
+      <with|par-left|<quote|2tab>|2.3.1<space|2spc>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>>
+
+      <with|par-left|<quote|2tab>|2.3.2<space|2spc>F
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10>>
+
+      <with|par-left|<quote|1tab>|2.4<space|2spc>Order Statistics
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>>
+
+      <with|par-left|<quote|1tab>|2.5<space|2spc>Limit Theorems
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Reference>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9><vspace|0.5fn>
+      <no-break><pageref|auto-13><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

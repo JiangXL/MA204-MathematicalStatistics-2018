@@ -94,8 +94,8 @@
 
       p<rsub|3>=<around*|{|<frac|b<rsub|3 1>|a<rsub|3 1>>+<frac|b<rsub|3
       2>|a<rsub|3 2>>+<frac|b<rsub|3 3>|a<rsub|3 3>>+<frac|b<rsub|3
-      4>|a<rsub|3 4>>|}><rsup|-1>=<around*|{|<frac|7|1 2>+<frac|4|1311 1
-      2>+<frac|7|1 2>+<frac|7|1 2>|}><rsup|-1>=<frac|11 121 \ 1 2|2 5>
+      4>|a<rsub|3 4>>|}><rsup|-1>=<around*|{|<frac|7|1 2>+<frac|4|1
+      2>+<frac|7|1 2>+<frac|7|1 2>|}><rsup|-1>=<frac|12|2 5>
     </math>
 
     <\math>
@@ -133,10 +133,38 @@
 
   1.10
 
+  Suppose that the moment generating functions of two independent random
+  variables X and Y, are given by
+
+  <\equation*>
+    M<rsub|X><around*|(|t|)>=e<rsup|t<rsup|2>/2>
+  </equation*>
+
+  and
+
+  <\equation*>
+    M<rsub|Y><around*|(|t|)>=e<rsup|2t<rsup|2>-t>,
+  </equation*>
+
+  respectively. Let <math|W=3X+2Y>,
+
+  (a) Calculate the probability <math|Pr<around*|(|-12\<less\>W\<less\>3|)>>.
+
+  (b) Calculate <math|E<around*|(|W<rsup|2>|)>.>
+
+  <with|font-series|bold|Solve:>
+
+  <\math>
+    M<rsub|W><around*|(|t|)>=M<rsub|3X+2Y><around*|(|t|)>=<around*|(|e<rsup|t<rsup|2>/2>|)><rsup|3><around*|(|e<rsup|2t<rsup|2>-t>|)><rsup|2>=e<rsup|<frac|11|2>t<rsup|2>-2t>
+  </math>
+
   \;
 
   <section|Part II>
 </body>
+
+<initial|<\collection>
+</collection>>
 
 <\references>
   <\collection>
@@ -150,9 +178,9 @@
 <\auxiliary>
   <\collection>
     <\associate|table>
-      <tuple|normal||<pageref|auto-2>>
+      <tuple|normal|<surround|<hidden|<tuple>>||>|<pageref|auto-2>>
 
-      <tuple|normal||<pageref|auto-3>>
+      <tuple|normal|<surround|<hidden|<tuple>>||>|<pageref|auto-3>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Part
