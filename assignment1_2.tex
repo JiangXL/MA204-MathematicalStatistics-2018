@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{amssymb}
+
+%%%%%%%%%% Start TeXmacs macros
+\newcommand{\tmaffiliation}[1]{\\ #1}
+\newcommand{\tmtextbf}[1]{{\bfseries{#1}}}
+%%%%%%%%%% End TeXmacs macros
+
+\begin{document}
+
+\title{Part II}
+
+\author{
+  Yuejian Mo
+  \tmaffiliation{March 27, 2018}
+}
+
+\maketitle
+
+Let \tmtextbf{F} be a c.d.f on the real line $R$ and $a \in R$. Show that
+\[ \int [F (x + a) - F (x)] d x = a. \]
+Solution. For $a \geqslant 0$,
+\[ \int [F (x + a) - F (x)] d x = \int \int I_{(x, x + a]} (y) d F (y) d x \]
+Since $I_{(x, x + a]} (y) \geqslant 0$, by Funini's theorem, the above
+integral is equal to
+\[ \int \int I_{(y - a, y)} (x) d x d F (y) = \int a d F (y) = a \]
+The proof for the case of $a < 0$ is similar.
+
+\
+
+\end{document}

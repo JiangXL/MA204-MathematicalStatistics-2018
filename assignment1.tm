@@ -156,6 +156,8 @@
 
   <\math>
     M<rsub|W><around*|(|t|)>=M<rsub|3X+2Y><around*|(|t|)>=<around*|(|e<rsup|t<rsup|2>/2>|)><rsup|3><around*|(|e<rsup|2t<rsup|2>-t>|)><rsup|2>=e<rsup|<frac|11|2>t<rsup|2>-2t>
+
+    \;
   </math>
 
   \;
