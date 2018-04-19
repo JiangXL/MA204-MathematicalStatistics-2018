@@ -47,7 +47,80 @@
 
   <section|Moment Estimator>
 
+  <section|Beysian Estimator>
+
+  <section|Properties of Estimators>
+
+  Definition 3.2 (Unbiased estimator and bias). An estimator
+  <math|\<varphi\><around*|(|x|)>> is an <with|font-shape|italic|unbiased
+  setimotor> of the parameter <math|\<theta\>> if
+  <math|E<around*|{|\<varphi\><around*|(|<with|font-series|bold|x>|)>|}>=\<theta\>
+  for \<theta\>\<in\>\<Theta\>>. Otherwise, the estimator is biased and the
+  bias is defined by
+
+  <\equation*>
+    b<around*|(|\<theta\>|)>=E<around*|{|\<varphi\><around*|(|<with|font-series|bold|x>|)>|}>-\<theta\>
+  </equation*>
+
+  where <math|<with|font-series|bold|x>=<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>|)><rsup|T>.>
+
+  Definition 3.3 (MSE). Given an estimator
+  <math|Y=\<varphi\><around*|(|<with|font-series|bold|x>|)>> of
+  <math|\<theta\>>, the <with|font-shape|italic|mean square error> (MSE) of
+  the estimator if defined by
+
+  <\equation*>
+    MSE=E<around*|{|\<varphi\><around*|(|<with|font-series|bold|x>|)>-\<theta\>|}><rsup|2>
+  </equation*>
+
+  Definition 3.4 (Relative efficiency). Let <math|\<theta\>>
+
   \;
+
+  \ 
+
+  Theorem 3.3 (The general CR inequality). Let
+  <math|\<tau\><around*|(|\<theta\>|)>> be an arbitrary function of the
+  unknown <math|\<theta\>>. If (i) <math|\<theta\><rsup|<rsup|>>=T<around*|(|<with|font-series|bold|x>|)>>
+  is an unbiased estimator of <math|\<tau\><around*|(|\<theta\>|)>>, and (ii)
+  the support of the population density <math|f<around*|(|x;\<theta\>|)>>
+  does not depend on the parameter <math|\<theta\>>
+
+  Theorem 3.4 (Alternative expression). Let
+  <math|I<rsub|n><around*|(|\<theta\>|)>> denote the information, If
+  <math|E<around*|{|S<around*|(|\<theta\>|)>|}>=0,> then
+
+  <\equation*>
+    I<rsub|n><around*|(|\<theta\>|)>=E<around*|{|-<frac|d<rsup|2>logL<around*|(|\<theta\>;<with|font-series|bold|x>|)>|d\<theta\><rsup|2>>|}>=n
+    I<around*|(|\<theta\>|)>,
+  </equation*>
+
+  where
+
+  <\equation*>
+    I<around*|(|\<theta\>|)>=E<around*|[|<around*|{|<frac|d log
+    f<around*|(|X;\<theta\>|)>|d \<theta\>>|}><rsup|2>|]>=E<around*|{|-<frac|d<rsup|2>log
+    f<around*|(|X;\<theta\>|)>|d \<theta\><rsup|2>>|}>
+  </equation*>
+
+  denote the Fisher inoformation for a single sample.
+
+  Definition 3.5 (UMVUE). An estimator <math|\<theta\><rsup|\<ast\>>> is
+  called a UMVUE of <math|\<theta\>> if it is unbiased and has the smallest
+  variance among all unbiased estimators.
+
+  Definition 3.6 (Efficient estimator). If an unbiased estimator
+  <math|\<theta\>=T<around*|(|<with|font-series|bold|x>|)>> for
+  <math|\<tau\><around*|(|\<theta\>|)>> has variance equal to the Cramer-Rao
+  lower bound, then <math|\<theta\>> is called an
+  <with|font-shape|italic|efficent estimator> for
+  <math|\<tau\><around*|(|\<theta\>|)>.>
+
+  \;
+
+  Chi-square distribution
+
+  Notation: <math|X-\<chi\><rsup|2><around*|(|n|)>>
 </body>
 
 <initial|<\collection>
@@ -61,6 +134,8 @@
     <associate|auto-4|<tuple|1.3|?>>
     <associate|auto-5|<tuple|1.4|?>>
     <associate|auto-6|<tuple|2|?>>
+    <associate|auto-7|<tuple|3|?>>
+    <associate|auto-8|<tuple|4|?>>
   </collection>
 </references>
 
@@ -68,7 +143,8 @@
   <\collection>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Maximum
-      Likehood Estimator> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Likehood Estimator \<#6700\>\<#5927\>\<#4F3C\>\<#7136\>\<#4F30\>\<#8BA1\>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|1.1<space|2spc>Point estimator and point
