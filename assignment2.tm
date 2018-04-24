@@ -34,9 +34,11 @@
   <with|font-series|bold|2.3> Let\ 
 
   <with|font-series|bold|2.4> Let <math|X<rsub|i>\<sim\>Gamma<around*|(|a<rsub|i>,1|)>,i=1,\<ldots\>\<ldots\>.n,>
-  and <math|X<rsub|1>,\<ldots\>,X<rsub|n>>
+  and <math|X<rsub|1>,\<ldots\>,X<rsub|n>> are mutually independent. Difine
 
-  \;
+  <\equation*>
+    Y<rsub|i>=<frac|X<rsub|i>|m<space|1em>>
+  </equation*>
 
   \;
 
@@ -69,7 +71,7 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?>>
+    <associate|auto-1|<tuple|1|1>>
   </collection>
 </references>
 

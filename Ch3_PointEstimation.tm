@@ -49,7 +49,11 @@
 
   <section|Beysian Estimator>
 
-  <section|Properties of Estimators>
+  <\section>
+    Properties of Estimators
+  </section>
+
+  <subsection|Unbiasedness>
 
   Definition 3.2 (Unbiased estimator and bias). An estimator
   <math|\<varphi\><around*|(|x|)>> is an <with|font-shape|italic|unbiased
@@ -121,21 +125,76 @@
   Chi-square distribution
 
   Notation: <math|X-\<chi\><rsup|2><around*|(|n|)>>
+
+  <subsection|Efficiency>
+
+  <subsection|Sufficiency>
+
+  Definition 3.7(Sufficent statistc). A statistic <math|T<around*|(|x|)>> is
+  said to be a sufficient statistic of <math|\<theta\>> if the conditional
+  distribution of <math|<with|font-series|bold|x>>, given
+  <math|T<around*|(|<with|font-series|bold|x>|)>=t>, does not depend on
+  <math|\<theta\>> for any value of <with|font-shape|italic|t>. In discrete
+  case, this mean that
+
+  <\equation*>
+    Pr<around*|{|X<rsub|1>=x<rsub|1>,\<ldots\>,X<rsub|n>=x<rsub|n>;\<theta\><around*|\||T<around*|(|<with|font-series|bold|x>|)>=t|\<nobracket\>>|}>=h<around*|(|<with|font-series|bold|x>|)>
+  </equation*>
+
+  Thm 3.5 (Factorization theorem) A statistic
+  <math|T<around*|(|<with|font-series|bold|x>|)>> is a sufficient statistc of
+  the unknow parameter <math|\<theta\>> iff the joint pdf(or pmd) can be
+  written in the form
+
+  <\equation*>
+    f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>;\<theta\>|)>=f<around*|(|<with|font-series|bold|x>;\<theta\>|)>=g<around*|(|T<around*|(|<with|font-series|bold|x>|)>;\<theta\>|)>\<times\>h<around*|(|<with|font-series|bold|x>|)>,
+  </equation*>
+
+  Defination 3.8 (Joint sufficient statistics). Let
+  <math|X<rsub|1>,\<ldots\>,X<rsub|n>\<sim\>iid
+  f<around*|(|x;<with|font-series|bold|\<theta\>>|)>.> The statistics
+  <math|T<rsub|1><around*|(|<with|font-series|bold|x>|)>,\<ldots\>,T<rsub|r><around*|(|<with|font-series|bold|x>|)>>
+  are said to be jointly sufficient if the conditional distribution of
+  <math|<with|font-series|bold|x>>, given
+
+  <subsection|Completeness>
+
+  \ Defniton 3.9 (Completeneness). Let <math|X<rsub|1>,\<ldots\>,X<rsub|n>>
+  denote a random sample from the pdf (or pmf)
+  <math|f<around*|(|x;\<theta\>|)>> with parameter space and let\ 
+
+  Theorem 3.7 (Lehamann-Scheffe Theorem). Let
+  <math|T<around*|(|<with|font-series|bold|x>|)>> is a complete sufficient
+  statistic for <math|\<theta\>>. If <math|g<around*|(|T|)>> is an unbiased
+  estimator of <math|\<tau\><around*|(|\<theta\>|)>>, then
+  <math|g<around*|(|T|)>> is the unique UMVUE for
+  <math|\<tau\><around*|(|\<theta\>|)>.>
+
+  \;
+
+  \;
 </body>
 
-<initial|<\collection>
-</collection>>
+<\initial>
+  <\collection>
+    <associate|page-medium|papyrus>
+  </collection>
+</initial>
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?>>
-    <associate|auto-2|<tuple|1.1|?>>
-    <associate|auto-3|<tuple|1.2|?>>
-    <associate|auto-4|<tuple|1.3|?>>
-    <associate|auto-5|<tuple|1.4|?>>
-    <associate|auto-6|<tuple|2|?>>
-    <associate|auto-7|<tuple|3|?>>
-    <associate|auto-8|<tuple|4|?>>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|4.2|?>>
+    <associate|auto-11|<tuple|4.3|?>>
+    <associate|auto-12|<tuple|4.4|?>>
+    <associate|auto-2|<tuple|1.1|1>>
+    <associate|auto-3|<tuple|1.2|1>>
+    <associate|auto-4|<tuple|1.3|1>>
+    <associate|auto-5|<tuple|1.4|1>>
+    <associate|auto-6|<tuple|2|1>>
+    <associate|auto-7|<tuple|3|1>>
+    <associate|auto-8|<tuple|4|1>>
+    <associate|auto-9|<tuple|4.1|2>>
   </collection>
 </references>
 
@@ -166,6 +225,26 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Moment
       Estimator> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Beysian
+      Estimator> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Properties
+      of Estimators> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|4.1<space|2spc>Unbiasedness
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>>
+
+      <with|par-left|<quote|1tab>|4.2<space|2spc>Efficiency
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10>>
+
+      <with|par-left|<quote|1tab>|4.3<space|2spc>Sufficiency
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>>
     </associate>
   </collection>
 </auxiliary>
