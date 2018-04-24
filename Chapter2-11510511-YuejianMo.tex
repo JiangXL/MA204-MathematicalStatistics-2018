@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb}
+
+%%%%%%%%%% Start TeXmacs macros
+\newcommand{\assign}{:=}
+\newcommand{\nobracket}{}
+\newcommand{\tmaffiliation}[1]{\\ #1}
+\newcommand{\tmop}[1]{\ensuremath{\operatorname{#1}}}
+%%%%%%%%%% End TeXmacs macros
+
+\begin{document}
+
+\title{Mathematical Statistics Assignment 2}
+
+\author{
+  yuejian mo
+  \tmaffiliation{11510511}
+}
+
+\maketitle
+
+\section*{Part II}
+
+Q 2.9: Find the MLE of the unknown parameter $\theta$ when $X_1, X_2, \ldots,
+X_n$ is a sample from the distribution whose density function is:
+\[ f_X (x) = \frac{1}{2} e^{- | x - \theta |}, - \infty < x < \infty \]
+Suggest Solution:
+\[ f_X (x) = \frac{1}{2} e^{- | x - \theta |}, - \infty < x < \infty \]
+is a special case of the Laplace distribution given as follows:
+\[ f_X (x | \mu, \sigma \nobracket) = \frac{1}{\sqrt{2} \sigma} e^{-
+   \frac{\sqrt{2} | x - \mu |}{\sigma}}, x \in \Re \]
+for $\sigma = \sqrt{2}$ and $\mu \assign \theta$. To be more general, lets
+consider the Laplace distribution with parameter $(\mu, \sigma) .$
+
+Consider the likelihood function for $N$ data samples:
+\[ L (\mu, \sigma ; x) = \prod_{t = 1}^N \frac{1}{\sqrt{2} \sigma} e^{-
+   \frac{\sqrt{2} | x_t - \mu |}{\sigma}} = \left( \sqrt{2} \sigma \right)^{-
+   N} e^{\frac{- \sqrt{2}}{\sigma} \sum_{t = 1}^N | x_t - \mu |} \]
+Take the log likelihood function as $l (\mu, \sigma ; x) = \log (L (\mu,
+\sigma ; x))$ and we get
+\[ l (\mu, \sigma ; x) = - N \tmop{In} \left( \sqrt{2} \sigma \right) -
+   \frac{\sqrt{2}}{\sigma} \sum_{t = 1}^N | x_t - \mu | \]
+Take the derivate with respect to the parameter $\mu$
+\[ \frac{\partial l}{\partial \mu} = - \frac{\sqrt{2}}{\sigma} \sum_{t = 1}^N
+   \frac{\partial | x_t - \mu |}{\partial \mu} \]
+which is equal to
+\[ = \frac{\sqrt{2}}{\sigma} \sum_{t = 1}^N \tmop{sgn} (x_t - \mu) \]
+using the identity
+\[ \frac{\partial | x |}{\partial x} = \frac{\partial \sqrt{x^2}}{\partial x}
+   = x (x^2)^{- 1 / 2} = \frac{x}{| x |} = \tmop{sgn} (x) \]
+To maximize the likelihood function we need to solve
+\begin{equation}
+  = \frac{\sqrt{2}}{\sigma} \sum_{t = 1}^N \tmop{sgn} (x_t - \mu) = 0
+\end{equation}
+For which we have two cases: $N$ is even or odd.
+
+If $N$ is odd and we choose $\hat{\mu} = \tmop{median} (x_1, \cdots x_N)$,
+then there are $\frac{N - 1}{2}$ cases where $x_t < \mu$ and for the other
+$\frac{N - 1}{2}$ cases $x_t > \mu$, therefore $\hat{\mu}$ satisfies (1) and
+is the Maximum likelihood estimator for the parameter $\mu$.
+
+If $N$ is even, we can not simply choose one $x_t$ which will satisfy(1),
+however we can still minimize it through ranking the observations as $x_1
+\leqslant x_2 \leqslant \ldots, x_N$ \ and then choosing either $x_{N / 2}$ or
+$x_{(N + 1) / 2}$.
+
+In summary $\hat{\mu} = \tmop{median} (x_1, \ldots, x_N)$ is the maximum
+likelihood estimator for any $N$.
+
+\section*{Sources}
+
+https://math.stackexchange.com/questions/240496/finding-the-maximum-likelihood-estimator
+
+\
+
+\end{document}
