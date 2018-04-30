@@ -1,4 +1,4 @@
-<TeXmacs|1.99.5>
+<TeXmacs|1.99.6>
 
 <style|generic>
 
@@ -36,7 +36,58 @@
 
   <subsection|Joint density and likelihood function>
 
+  Since <math|<with|font-series|bold|x>> has been observed and its components
+  are therefore fixed real numbers, we regard
+  <math|f<around*|(|<with|font-series|bold|x>;<with|font-series|bold|\<theta\>>|)>>
+  as a function of <with|font-series|bold|<math|\<theta\>>>, and define
+
+  <\equation*>
+    L<around*|(|<with|font-series|bold|\<theta\>>|)>=L<around*|(|<with|font-series|bold|\<theta\><with|font-series|medium|;>x>|)>=f<around*|(|<with|font-series|bold|x>;<with|font-series|bold|\<theta\>>|)>=<big|prod><rsub|i=1><rsup|n>f<around*|(|x<rsub|i>;<with|font-series|bold|\<theta\>>|)>,<with|font-series|bold|\<theta\>>\<in\><with|font-series|bold|\<Theta\>>,
+  </equation*>
+
+  as the <with|font-shape|italic|likehood function> of the random smaple
+  <math|<with|font-series|bold|x>>. It also can be called:
+  <math|L<around*|(|\<theta\>|)>> is the likehood function of
+  <math|<with|font-series|bold|\<theta\>>>.
+
+  For avoid the operation of <math|<big|prod>>, we has
+  <with|font-shape|italic|log-likehood>
+
+  <\equation*>
+    l<around*|(|<with|font-series|bold|\<theta\>>|)><wide|=|^>log<around*|{|L<around*|(|<with|font-series|bold|\<theta\>>|)>|}>=<big|sum><rsub|i=1><rsup|n>log<around*|{|f<around*|(|x<rsub|i>;<with|font-series|bold|\<theta\>>|)>|}>
+    for <with|font-series|bold|\<theta\>>\<in\><with|font-series|bold|\<Theta\>>
+  </equation*>
+
+  \ There is no loss of information in using
+  <math|l<around*|(|<with|font-series|bold|\<theta\>>|)>> instead of
+  <math|L<around*|(|\<theta\>|)>> because log(.) is a monotonic increasing
+  function.
+
+  \ 
+
   <subsection|Maximum likelihood estimator and maximum likelihood estimate>
+
+  To get reasonable <math|<with|font-series|bold|\<theta\>>>, we suppose that
+  a statistic
+
+  <\equation*>
+    <wide|<with|font-series|bold|\<theta\>>|^>=<around*|(|<tabular|<tformat|<table|<row|<cell|<wide|\<theta\><rsub|1><rsub|>|^>>>|<row|<cell|\<vdots\>>>|<row|<cell|<wide|\<theta\><rsub|n>|^>>>>>>|)>=<around*|(|<tabular|<tformat|<table|<row|<cell|u<rsub|1><around*|(|<with|font-series|bold|x>|)>>>|<row|<cell|\<vdots\>>>|<row|<cell|u<rsub|n><around*|(|<with|font-series|bold|x>|)>>>>>>|)><wide|=|^><with|font-series|bold|u><around*|(|<with|font-series|bold|x>|)>
+  </equation*>
+
+  statisfies
+
+  <\equation*>
+    L<around*|(|<wide|<with|font-series|bold|\<theta\>>|^>|)>=max<rsub|<with|font-series|bold|\<theta\>>\<in\><with|font-series|bold|\<Theta\>>>
+    L<around*|(|<with|font-series|bold|\<theta\>>|)>.
+  </equation*>
+
+  We call <math|<wide|<with|font-series|bold|\<theta\>>|^>=u<around*|(|<with|font-series|bold|x>|)>>
+  the <with|font-shape|italic|maximum likehood estimator>(MLE) of
+  <math|<with|font-series|bold|\<theta\>>> and call
+  <math|u<around*|(|<with|font-series|bold|x>|)>> a
+  <with|font-shape|italic|maximum likehood estimate estimate>(mle) of
+  <math|<with|font-series|bold|\<theta\>>>. There is no guarantee that the
+  MLE exists or if does whether it is unique.
 
   <subsection|The invariance property of MLE>
 
