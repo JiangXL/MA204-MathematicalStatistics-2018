@@ -173,6 +173,10 @@
   \;
 
   \;
+
+  \;
+
+  Fisher \<#4FE1\>\<#606F\>\<#91CF\>
 </body>
 
 <\initial>
@@ -245,6 +249,10 @@
       <with|par-left|<quote|1tab>|4.3<space|2spc>Sufficiency
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
+
+      <with|par-left|<quote|1tab>|4.4<space|2spc>Completeness
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12>>
     </associate>
   </collection>
 </auxiliary>
