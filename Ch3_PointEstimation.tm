@@ -1,4 +1,4 @@
-<TeXmacs|1.99.6>
+<TeXmacs|1.99.5>
 
 <style|generic>
 
@@ -63,8 +63,6 @@
   <math|L<around*|(|\<theta\>|)>> because log(.) is a monotonic increasing
   function.
 
-  \ 
-
   <subsection|Maximum likelihood estimator and maximum likelihood estimate>
 
   To get reasonable <math|<with|font-series|bold|\<theta\>>>, we suppose that
@@ -91,11 +89,39 @@
 
   <subsection|The invariance property of MLE>
 
-  Theorem 3.1: (Invariance of MLE). Let <math|>
+  <with|font-series|bold|Theorem 3.1>: (Invariance of MLE). Let
+  <math|<wide|<with|font-series|bold|\<theta\>>|^>=u<around*|(|X<rsub|1>,\<ldots\>,X<rsub|N>|)>>
+  be the MLE of <math|\<theta\><rsub|p\<times\>1>\<in\>\<Theta\>>. If
+  <math|<with|font-series|bold|\<eta\>><rsub|p\<times\>1>=<around*|(|h<rsub|1><around*|(|<with|font-series|bold|\<theta\>>|)>,\<ldots\>,h<rsub|p><around*|(|<with|font-series|bold|\<theta\>>|)>|)><rsup|T>>
+  is a one-to-one transformation between<with|font-series|bold|
+  <math|\<theta\>>> and <math|<with|font-series|bold|\<eta\>>>, then
+  <math|<wide|<with|font-series|bold|\<eta\>>|^>=h<around*|(|<wide|<with|font-series|bold|\<theta\>>|^>|)>>
+  is the MLE of <math|<with|font-series|bold|\<eta\>>>.
+
+  \;
+
+  <with|font-series|bold|Theorem 3.2> (Extension of Theorem 3.1): Let
+  <math|<wide|<with|font-series|bold|\<theta\>>|^>> be the MLE of
+  <math|<with|font-series|bold|\<theta\>>=<around*|(|\<theta\><rsub|1>,\<ldots\>,\<theta\><rsub|p>|)><rsup|T>\<in\>\<Theta\>>.
+  If <math|<with|font-series|bold|\<eta\>><rsub|r\<times\>1>=h<around*|(|<with|font-series|bold|\<theta\>>|)>=<around*|(|h<rsub|1><around*|(|\<theta\>|)>,\<ldots\>,h<rsub|r><around*|(|\<theta\>|)>|)><rsup|T>>
+  for <math|1\<leqslant\>r\<leqslant\>p> is a many-to-few transformation
+  between <with|font-series|bold|<math|\<theta\>>> and
+  <with|font-series|bold|<math|\<eta\>>>, then
+  <math|<wide|<with|font-series|bold|\<eta\>>|^>=h<around*|(|<wide|<with|font-series|bold|\<theta\>>|^>|)>=<around*|(|h<rsub|1><around*|(|<wide|\<theta\>|^>|)>,\<ldots\>,h<rsub|r><around*|(|<wide|\<theta\>|^>|)>|)><rsup|T>>
+  is the MLE of <with|font-series|bold|<math|\<eta\>>>.
+
+  This property of invariance of MLEs allows us in our discussin of maximum
+  likelihood estimation to consider estimating
+  <math|<around*|(|\<theta\><rsub|1>,\<ldots\>,\<theta\><rsub|p>|)><rsup|T>>
+  rather than the more general <math|h<rsub|1><around*|(|\<theta\><rsub|1>,\<ldots\>,\<theta\><rsub|p>|)>,\<ldots\>,h<rsub|r><around*|(|\<theta\><rsub|1>,\<ldots\>,\<theta\><rsub|p>|)>>.
 
   <section|Moment Estimator>
 
+  \;
+
   <section|Beysian Estimator>
+
+  \;
 
   <\section>
     Properties of Estimators
@@ -237,17 +263,17 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|4.2|2>>
-    <associate|auto-11|<tuple|4.3|2>>
-    <associate|auto-12|<tuple|4.4|2>>
+    <associate|auto-10|<tuple|4.2|3>>
+    <associate|auto-11|<tuple|4.3|3>>
+    <associate|auto-12|<tuple|4.4|3>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
     <associate|auto-4|<tuple|1.3|1>>
-    <associate|auto-5|<tuple|1.4|1>>
-    <associate|auto-6|<tuple|2|1>>
-    <associate|auto-7|<tuple|3|1>>
-    <associate|auto-8|<tuple|4|1>>
-    <associate|auto-9|<tuple|4.1|1>>
+    <associate|auto-5|<tuple|1.4|2>>
+    <associate|auto-6|<tuple|2|2>>
+    <associate|auto-7|<tuple|3|2>>
+    <associate|auto-8|<tuple|4|2>>
+    <associate|auto-9|<tuple|4.1|2>>
   </collection>
 </references>
 
