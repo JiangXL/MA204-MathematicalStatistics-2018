@@ -65,7 +65,29 @@
   <\enumerate-alpha>
     <item>Find the MLE <math|<wide|\<theta\>|^>> of <math|\<theta\>>?
 
-    <with|font-series|bold|Solve:>
+    <with|font-series|bold|Solve:>\ 
+
+    The joint pmf of <math|<with|font-series|bold|x>=<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>|)><rsup|T>>
+    is
+
+    <\equation*>
+      f<around*|(|<with|font-series|bold|x>;\<theta\>|)>=<big|prod><rsub|i=1><rsup|n><frac|1|<sqrt|2\<pi\>\<theta\>>>Exp<around*|(|-<frac|<around*|(|x<rsub|i>-\<mu\><rsub|0>|)><rsup|2>|2\<theta\>>|)>
+    </equation*>
+
+    Then the likehood function is
+
+    <\equation*>
+      L<around*|(|\<theta\>|)>=<big|prod><rsub|i=1><rsup|n>f<around*|(|x<rsub|i>,\<theta\>|)>=<around*|(|<frac|1|<sqrt|2\<pi\>\<theta\>>>|)><rsup|n>e<rsup|-n/2\<theta\>>
+      Exp<around*|(|<big|sum><rsub|i=1><rsup|n><around*|(|x<rsub|i>-\<mu\><rsub|0>|)><rsup|2>|)>
+    </equation*>
+
+    The log likehood function is
+
+    <\equation*>
+      l<around*|(|\<theta\>|)>=-<frac|n|2>
+      log<around*|(|2\<pi\>\<theta\>|)>-<frac|n|2\<theta\>>+<big|sum><rsub|i=1><rsup|n><around*|(|x<rsub|i>-\<mu\><rsub|0>|)><rsup|2>=-<frac|n|2>
+      log<around*|(|\<theta\>|)>-<frac|n|2\<theta\>>-<frac|n|2>log<around*|(|2\<pi\>|)>+<big|sum><rsub|i=1><rsup|n><around*|(|x<rsub|i>-\<mu\><rsub|0>|)><rsup|2>
+    </equation*>
 
     <item>What is the asymptotic distribution of
     <math|<sqrt|n><around*|(|<wide|\<theta\>|^>-\<theta\>|)>>?

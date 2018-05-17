@@ -48,7 +48,23 @@
 
   Also, we can define one-sided upper confidence limit for <math|\<theta\>>.
 
-  <with|font-series|bold|Definition> 4.1(Pivotal quantity).\ 
+  To find a CI for a parameter, we need to introduce the concept of
+  <with|font-shape|italic|pivot>. The use of pivots for the construction of
+  CIs or confidence sets can be traced as far back as Fisher(1930), who used
+  the term of <with|font-shape|italic|inverse probability>. Based on pivotal
+  quantities, Barnard proposed a so-called <with|font-shape|italic|pivotal
+  inference>, which is closely related with the theory of
+  <with|font-shape|italic|structural inference> of Fraser. Berger and Wolpert
+  discussed the strengths and weaknesses of these methods. We have following
+  defination.
+
+  <with|font-series|bold|Definition 4.1>(Pivotal quantity). Assume that
+  <math|X<rsub|1>,\<ldots\>,X<rsub|n><above|\<sim\>|iid>Exponential<around*|(|\<theta\>|)>>.
+  Find a <math|100<around*|(|1-\<alpha\>|)>%> CI for <math|\<theta\>>. Let
+  <math|P=P<around*|(|T,\<theta\>|)>> be a function of <math|T> and
+  <math|\<theta\>>. If the distribution of <math|P> does not depend on
+  <math|\<theta\>>, then <math|P> is called a <with|font-shape|italic|
+  pivotal quantity> or <with|font-shape|italic| pivot>.
 
   <section|The confidence Interval of Normal Mean>
 
@@ -139,15 +155,15 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|7|?>>
+    <associate|auto-10|<tuple|7|2>>
     <associate|auto-2|<tuple|2|1>>
-    <associate|auto-3|<tuple|3|1>>
-    <associate|auto-4|<tuple|4|1>>
-    <associate|auto-5|<tuple|5|1>>
-    <associate|auto-6|<tuple|6|1>>
-    <associate|auto-7|<tuple|6.1|?>>
-    <associate|auto-8|<tuple|6.2|?>>
-    <associate|auto-9|<tuple|6.3|?>>
+    <associate|auto-3|<tuple|3|2>>
+    <associate|auto-4|<tuple|4|2>>
+    <associate|auto-5|<tuple|5|2>>
+    <associate|auto-6|<tuple|6|2>>
+    <associate|auto-7|<tuple|6.1|2>>
+    <associate|auto-8|<tuple|6.2|2>>
+    <associate|auto-9|<tuple|6.3|2>>
   </collection>
 </references>
 
@@ -181,6 +197,24 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Large-Sample
       Confidence Intervals> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|6.1<space|2spc>Method I: Based on the
+      central limit theorem <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7>>
+
+      <with|par-left|<quote|1tab>|6.2<space|2spc>Method II: Based on the
+      asymptotic normality of <with|mode|<quote|math>|S<around*|(|\<theta\>;x|)>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>>
+
+      <with|par-left|<quote|1tab>|6.3<space|2spc>Method III: Based on the
+      asympotic normality of <with|mode|<quote|math>|<wide|\<theta\>|^><rsub|n>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>The
+      shortest Confidence Interval> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
