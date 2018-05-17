@@ -36,6 +36,14 @@
 
   <subsection|Joint density and likelihood function>
 
+  In formal contexts, \Plikelihood\Q is often used as a synonym
+  \Pprobalilty\Q. In mathematical statistics, the two terms have different
+  meaning. <with|font-shape|italic|Probability> in this technical context
+  describes the plausibility of a future outcome, given a model parameter
+  value, without reference to any observed data.
+  <with|font-shape|italic|Likehood> describes the plausibility of a model
+  parameter value, given specific observed data.
+
   Since <math|<with|font-series|bold|x>> has been observed and its components
   are therefore fixed real numbers, we regard
   <math|f<around*|(|<with|font-series|bold|x>;<with|font-series|bold|\<theta\>>|)>>
@@ -98,8 +106,6 @@
   <math|<wide|<with|font-series|bold|\<eta\>>|^>=h<around*|(|<wide|<with|font-series|bold|\<theta\>>|^>|)>>
   is the MLE of <math|<with|font-series|bold|\<eta\>>>.
 
-  \;
-
   <with|font-series|bold|Theorem 3.2> (Extension of Theorem 3.1): Let
   <math|<wide|<with|font-series|bold|\<theta\>>|^>> be the MLE of
   <math|<with|font-series|bold|\<theta\>>=<around*|(|\<theta\><rsub|1>,\<ldots\>,\<theta\><rsub|p>|)><rsup|T>\<in\>\<Theta\>>.
@@ -117,7 +123,16 @@
 
   <section|Moment Estimator>
 
-  \;
+  <with|font-shape|italic|Method of moments> is proposed by the great Brith
+  statistician Karl Pearson near the turn of the twentieth century. If
+  <math|H<rsub|0>> is rejected, one way is to guess another population
+  distribution. Alternatively, we can estimate the first and second moments
+  of the unknown population distribution <math|F<around*|(|\<cdot\>|)>> by
+  using the <with|font-shape|italic|method of moments>.
+
+  The mothod of moments can be applied to both
+  <with|font-shape|italic|parametric> and
+  <with|font-shape|italic|nonparametric> statistics.
 
   <section|Beysian Estimator>
 
@@ -148,21 +163,65 @@
   the estimator if defined by
 
   <\equation*>
-    MSE=E<around*|{|\<varphi\><around*|(|<with|font-series|bold|x>|)>-\<theta\>|}><rsup|2>
+    MSE=E<around*|{|\<varphi\><around*|(|<with|font-series|bold|x>|)>-\<theta\>|}><rsup|2>=Var<around*|{|\<varphi\><around*|(|<with|font-series|bold|x>|)>|}>+b<rsup|2><around*|(|\<theta\>|)>
   </equation*>
 
-  Definition 3.4 (Relative efficiency). Let <math|\<theta\>>
+  If the an estimator <math|\<varphi\><around*|(|<with|font-series|bold|x>|)>>
+  is unbiased, then <math|MSE=Var<around*|(|\<varphi\><around*|(|<with|font-series|bold|x>|)>|)>>.
 
-  \;
+  <subsection|Efficiency>
+
+  Maybe two estimator share same bias for the same unknow parameter, so we
+  notion of efficiency to choose the unbiased estimator with the
+  <with|font-shape|italic|smaller> variance.
+
+  Definition 3.4 (Relative efficiency). Let <math|<wide|\<theta\>|^><rsub|1>>
+  and <math|<wide|\<theta\>|^><rsub|2>> be two unbiased estimators for a
+  parameter <math|\<theta\>>. If
+
+  <\equation*>
+    Var<around*|(|<wide|\<theta\>|^><rsub|1>|)>\<less\>Var<around*|(|<wide|\<theta\>|^><rsub|2>|)>,
+  </equation*>
+
+  we say that <math|<wide|\<theta\>|^><rsub|1>> is
+  <with|font-shape|italic|more efficent> than
+  <math|<wide|\<theta\>|^><rsub|2>>. The <with|font-shape|italic|relative
+  efficiency> of <math|<wide|\<theta\>|^><rsub|1>> to
+  <math|<wide|\<theta\>|^><rsub|2>> is defined by the ratio
+
+  <\equation*>
+    <frac|Eff<rsub|<wide|\<theta\>|^><rsub|1>>|Eff<rsub|<wide|\<theta\>|^><rsub|2>>>=<frac|Var<around*|(|<wide|\<theta\>|^><rsub|2>|)>|Var<around*|(|<wide|\<theta\>|^><rsub|1>|)>>
+  </equation*>
+
+  Let <math|u=<around*|{|<wide|\<theta\>|^>:E<around*|(|<wide|\<theta\>|^>|)>=\<theta\>|}>>
+  denote the family of unbiased estimators of <math|\<theta\>>. We try to
+  find the <math|<wide|\<theta\><rsup|\<ast\>>|^>\<in\>u> with the smallest
+  variance. Here are found by Cramer and Rao, if we could find a constant
+  <math|c<rsub|0>> satisfying
+
+  <\equation*>
+    Var<around*|(|<wide|\<theta\>|^>|)>\<geqslant\>c<rsub|0>,\<forall\><wide|\<theta\>|^>\<in\>u,
+  </equation*>
+
+  thus, the <math|<wide|\<theta\><rsup|\<ast\>>|^>> is equivalent to finding
+  the lower bound <math|c<rsub|0>>.
 
   \ 
 
   <with|font-series|bold|Theorem 3.3 (The general CR inequality)>. Let
   <math|\<tau\><around*|(|\<theta\>|)>> be an arbitrary function of the
-  unknown <math|\<theta\>>. If (i) <math|\<theta\><rsup|<rsup|>>=T<around*|(|<with|font-series|bold|x>|)>>
+  unknown <math|\<theta\>>. If (i) <math|\<theta\><rsup|<rsup|>>=T<around*|(|<with|font-series|bold|><with|font-series|bold|x>|)>>
   is an unbiased estimator of <math|\<tau\><around*|(|\<theta\>|)>>, and (ii)
   the support of the population density <math|f<around*|(|x;\<theta\>|)>>
-  does not depend on the parameter <math|\<theta\>>
+  does not depend on the parameter <math|\<theta\>>, then
+
+  <\equation*>
+    Var<around*|(|<wide|\<theta\>|^>|)>\<geqslant\><frac|<around*|{|\<tau\><rprime|'><around*|(|\<theta\>|)>|}><rsup|2>|I<rsub|n><around*|(|\<theta\>|)>>,
+  </equation*>
+
+  where <math|I<rsub|n><around*|(|\<theta\>|)>> is the Fisher information.
+  The right hand side is called the <math|><with|font-shape|italic|Cramer\URao
+  lower bound>.
 
   <with|font-series|bold|Theorem 3.4 (Alternative expression)>. Let
   <math|I<rsub|n><around*|(|\<theta\>|)>> denote the information, If
@@ -199,8 +258,6 @@
   Chi-square distribution
 
   Notation: <math|X-\<chi\><rsup|2><around*|(|n|)>>
-
-  <subsection|Efficiency>
 
   <subsection|Sufficiency>
 
@@ -252,6 +309,14 @@
   \;
 
   Fisher \<#4FE1\>\<#606F\>\<#91CF\>
+
+  <section|Reference>
+
+  <\itemize>
+    <item>https://en.wikipedia.org/wiki/Likelihood_function
+
+    <item>
+  </itemize>
 </body>
 
 <\initial>
@@ -263,9 +328,10 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|4.2|3>>
+    <associate|auto-10|<tuple|4.2|2>>
     <associate|auto-11|<tuple|4.3|3>>
-    <associate|auto-12|<tuple|4.4|3>>
+    <associate|auto-12|<tuple|4.4|4>>
+    <associate|auto-13|<tuple|5|4>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
     <associate|auto-4|<tuple|1.3|1>>
@@ -328,6 +394,10 @@
       <with|par-left|<quote|1tab>|4.4<space|2spc>Completeness
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Reference>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-13><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
