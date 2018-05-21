@@ -33,7 +33,7 @@
   Then the random interaval <math|<around*|[|T<rsub|1>,T<rsub|2>|]>> is
   called a <math|100<around*|(|1-\<alpha\>|)>%> CI for <math|\<theta\>,1-a>
   is called the <with|font-shape|italic|confidence coeffcient/level>, and
-  <math|T<rsub|1>> and <math|T<rsub|2>> are callled the lower and upper
+  <math|T<rsub|1>> and <math|T<rsub|2>> are called the lower and upper
   confidence limits/bounds, respecitively. A value
   <math|<around*|[|t<rsub|1>,t<rsub|2>|]>> of the random interval
   <math|<around*|[|T<rsub|1>,T<rsub|2>|]>> is called a
@@ -49,22 +49,33 @@
   Also, we can define one-sided upper confidence limit for <math|\<theta\>>.
 
   To find a CI for a parameter, we need to introduce the concept of
-  <with|font-shape|italic|pivot>. The use of pivots for the construction of
-  CIs or confidence sets can be traced as far back as Fisher(1930), who used
-  the term of <with|font-shape|italic|inverse probability>. Based on pivotal
-  quantities, Barnard proposed a so-called <with|font-shape|italic|pivotal
-  inference>, which is closely related with the theory of
+  <with|font-shape|italic|pivot(\<#67A2\>\<#8F74\>\<#53D8\>\<#91CF\>)>. The
+  use of pivots for the construction of CIs or confidence sets can be traced
+  as far back as Fisher(1930), who used the term of
+  <with|font-shape|italic|inverse probability>. Based on pivotal quantities,
+  Barnard proposed a so-called <with|font-shape|italic|pivotal inference>,
+  which is closely related with the theory of
   <with|font-shape|italic|structural inference> of Fraser. Berger and Wolpert
   discussed the strengths and weaknesses of these methods. We have following
   defination.
 
-  <with|font-series|bold|Definition 4.1>(Pivotal quantity). Assume that
-  <math|X<rsub|1>,\<ldots\>,X<rsub|n><above|\<sim\>|iid>Exponential<around*|(|\<theta\>|)>>.
-  Find a <math|100<around*|(|1-\<alpha\>|)>%> CI for <math|\<theta\>>. Let
-  <math|P=P<around*|(|T,\<theta\>|)>> be a function of <math|T> and
-  <math|\<theta\>>. If the distribution of <math|P> does not depend on
-  <math|\<theta\>>, then <math|P> is called a <with|font-shape|italic|
-  pivotal quantity> or <with|font-shape|italic| pivot>.
+  <with|font-series|bold|Definition 4.1>(Pivotal quantity
+  \<#67A2\>\<#8F74\>\<#53D8\>\<#91CF\>). Assume that
+  <math|X<rsub|1>,\<ldots\>,X<rsub|n><above|\<sim\>|iid>f<around*|(|x;\<theta\>|)>>
+  and <math|T=T<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>|)>> is a sufficient
+  statstic of <math|\<theta\>>. Let <math|P=P<around*|(|T,\<theta\>|)>> be a
+  function(no need be a statistc) of <math|T> and <math|\<theta\>>. If the
+  distribution of <math|P> does not depend on <math|\<theta\>>, then <math|P>
+  is called a <with|font-shape|italic|pivotal quantity> or
+  <with|font-shape|italic|pivot>.
+
+  <chinese|\<#6BD4\>\<#5982\>\<#8BF4\>\<#FF0C\>\<#6B63\>\<#6001\>\<#5206\>\<#5E03\>\<#8F6C\>\<#6362\>\<#6210\>\<#6807\>\<#51C6\>\<#6B63\>\<#6001\>\<#5206\>\<#5E03\>\<#65F6\>\<#FF0C\>\<#968F\>\<#673A\>\<#53D8\>\<#91CF\>\<#4E2D\>\<#8FD8\>\<#5305\>\<#542B\>\<#672A\>\<#77E5\>\<#53C2\>\<#6570\>\<#FF0C\>\<#4F46\>\<#5176\>\<#5206\>\<#5E03\>\<#4E2D\>\<#5374\>\<#4E0D\>\<#5305\>\<#542B\>\<#4EFB\>\<#4F55\>\<#672A\>\<#77E5\>\<#53C2\>\<#6570\>\<#3002\>\<#56E0\>\<#6B64\>\<#6807\>\<#51C6\>\<#5316\>\<#540E\>\<#7684\>\<#968F\>\<#673A\>\<#53D8\>\<#91CF\>\<#662F\>\<#4E00\>\<#4E2A\>\<#67A2\>\<#8F74\>\<#53D8\>\<#91CF\>\<#3002\>>
+
+  Pivotal quantities are fundamental to the construction of test stastics, as
+  they allow the stastic to not depend on parameters \V for example,
+  Student's t-statistic is for a normal distribution with unknown variance
+  (and mean). <chinese|\<#7EDF\>\<#8BA1\>\<#91CF\>\<#5E38\>\<#7528\>\<#4E8E\>\<#70B9\>\<#4F30\>\<#8BA1\>\<#548C\>\<#5047\>\<#8BBE\>\<#68C0\>\<#9A8C\>\<#FF0C\>\<#800C\>\<#67A2\>\<#8F74\>\<#53D8\>\<#91CF\>\<#5E38\>\<#7528\>\<#4E8E\>\<#533A\>\<#95F4\>\<#4F30\>\<#8BA1\>\<#3002\>>Here
+  are a general method of constructing a pivotal quantity.
 
   <section|The confidence Interval of Normal Mean>
 
@@ -143,6 +154,18 @@
 
   <section|The shortest Confidence Interval>
 
+  <section|References>
+
+  <\itemize-dot>
+    <item>https://en.wikipedia.org/wiki/Pivotal_quantity
+
+    <item>https://www.zhihu.com/question/33567579
+
+    <item><chapter|<hlink|<label|cb_post_title_url>\<#6982\>\<#7387\>\<#8BBA\>\<#4E0E\>\<#6570\>\<#7406\>\<#7EDF\>\<#8BA1\>\<#53CA\>Python\<#5B9E\>\<#73B0\>|http://www.cnblogs.com/Belter/p/8330773.html>>
+
+    <item>http://www.cnblogs.com/Belter/p/8337992.html
+  </itemize-dot>
+
   \;
 </body>
 
@@ -156,6 +179,8 @@
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|7|2>>
+    <associate|auto-11|<tuple|8|?>>
+    <associate|auto-12|<tuple|1|?>>
     <associate|auto-2|<tuple|2|1>>
     <associate|auto-3|<tuple|3|2>>
     <associate|auto-4|<tuple|4|2>>
@@ -164,6 +189,7 @@
     <associate|auto-7|<tuple|6.1|2>>
     <associate|auto-8|<tuple|6.2|2>>
     <associate|auto-9|<tuple|6.3|2>>
+    <associate|cb_post_title_url|<tuple|1|?>>
   </collection>
 </references>
 

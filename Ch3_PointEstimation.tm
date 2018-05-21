@@ -3,7 +3,7 @@
 <style|generic>
 
 <\body>
-  <doc-data|<doc-title|Point Estimate>|<doc-date|<date>>|<doc-author|<\author-data|<author-name|yuejian
+  <doc-data|<doc-title|Chapter 3 Point Estimate>|<doc-date|<date>>|<doc-author|<\author-data|<author-name|yuejian
   mo>>
     \;
   </author-data>>>
@@ -15,9 +15,12 @@
 
   <subsection|Point estimator and point estimate>
 
-  <with|font-series|bold|Definition 3.1 (A statistic)>. A function of one or
-  more r.v's that doest not depend on the unknown paramemter vector is called
-  statistic. Following show the mean of similar words.
+  <with|font-series|bold|Definition 3.1 (A statistic
+  \<#7EDF\>\<#8BA1\>\<#91CF\>)>. A function of one or more r.v's that doest
+  not depend on the unknown paramemter vector is called statistic.\ 
+
+  \<#5BF9\>\<#4E8E\>\<#7EDF\>\<#8BA1\>\<#91CF\>\<#FF0C\>\<#4E00\>\<#65E6\>\<#6837\>\<#672C\>\<#786E\>\<#5B9A\>\<#FF0C\>\<#7EDF\>\<#8BA1\>\<#91CF\>\<#7684\>\<#503C\>\<#4E5F\>\<#5C31\>\<#5B9A\>\<#4E0B\>\<#6765\>\<#FF0C\>\<#4F46\>\<#5176\>\<#5206\>\<#5E03\>\<#5F80\>\<#5F80\>\<#5305\>\<#542B\>\<#672A\>\<#77E5\>\<#53C2\>\<#6570\>\<#3002\>Following
+  show the mean of similar words.
 
   <\itemize>
     <item>Estimation \<#4F30\>\<#8BA1\>(\<#65B9\>\<#6CD5\>)
@@ -315,7 +318,7 @@
   <\itemize>
     <item>https://en.wikipedia.org/wiki/Likelihood_function
 
-    <item>
+    <item>https://www.zhihu.com/question/33567579
   </itemize>
 </body>
 
@@ -328,13 +331,13 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|4.2|2>>
-    <associate|auto-11|<tuple|4.3|3>>
+    <associate|auto-10|<tuple|4.2|3>>
+    <associate|auto-11|<tuple|4.3|4>>
     <associate|auto-12|<tuple|4.4|4>>
     <associate|auto-13|<tuple|5|4>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
-    <associate|auto-4|<tuple|1.3|1>>
+    <associate|auto-4|<tuple|1.3|2>>
     <associate|auto-5|<tuple|1.4|2>>
     <associate|auto-6|<tuple|2|2>>
     <associate|auto-7|<tuple|3|2>>

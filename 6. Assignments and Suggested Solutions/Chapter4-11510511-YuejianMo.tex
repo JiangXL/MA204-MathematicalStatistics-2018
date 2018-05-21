@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+%%%%%%%%%% Start TeXmacs macros
+\newcommand{\tmaffiliation}[1]{\\ #1}
+\newcommand{\tmop}[1]{\ensuremath{\operatorname{#1}}}
+\newcommand{\tmtextbf}[1]{{\bfseries{#1}}}
+%%%%%%%%%% End TeXmacs macros
+
+\begin{document}
+
+\title{Chapter 4 Confidence Interval Estimation}
+
+\author{
+  Yuejina Mo
+  \tmaffiliation{May 21, 2018}
+}
+
+\maketitle
+
+\section*{Part II}
+
+\tmtextbf{Q4.8} A process produces bags of refined sugar. The weights of the
+contents of these bags are normally distributed with standard deviation 1.2
+ounces. The contents of a random sample of 25 bags had a mean weight of 19.8
+ounces. Find the upper and lower confidence limits of a 99\% confidence
+interval for the true mean weight for all bags of sugar produced by the
+process.
+
+Ans:
+
+For a 99\% confidence interval the reliability factor is $Z_{0.005} = 2.58$
+and with a sample mean of 19.8, n=25, and a standard deviation of 1.2, the
+confidence limits are as follows:
+\[ \tmop{Upper} \tmop{confidence} \tmop{limit} = \overset{-}{x} + Z_{\alpha /
+   2} \frac{\sigma}{\sqrt{n}} = 19.8 + 2.58 \frac{1.2}{\sqrt{25}} = 20.42 \]
+\[ \tmop{Lower} \tmop{confidence} \tmop{limit} = \overset{-}{x} - Z_{\alpha /
+   2} \frac{\sigma}{\sqrt{n}} = 19.8 - 2.58 \frac{1.2}{\sqrt{25}} = 19.18 \]
+Source: 國立交通大學, 唐麗英老師上課講義,
+http://ocw.nctu.edu.tw/course/stat021/CH7.pdf
+
+\end{document}
