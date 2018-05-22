@@ -60,6 +60,7 @@
   <math|<with|font-series|bold|x>>. It also can be called:
   <math|L<around*|(|\<theta\>|)>> is the likehood function of
   <math|<with|font-series|bold|\<theta\>>>.
+  \<#8FD9\>\<#4E24\>\<#7684\>\<#81EA\>\<#53D8\>\<#91CF\>\<#4E0D\>\<#4E00\>\<#6837\>
 
   For avoid the operation of <math|<big|prod>>, we has
   <with|font-shape|italic|log-likehood>
@@ -137,7 +138,19 @@
   <with|font-shape|italic|parametric> and
   <with|font-shape|italic|nonparametric> statistics.
 
+  n \<#4E2A\>\<#53C2\>\<#6570\>\<#8981\>\<#6C42\> n\<#9636\>\<#77E9\>.
+
   <section|Beysian Estimator>
+
+  The joint pdf of <math|X<rsub|1>,\<ldots\>,X<rsub|n>> and <math|\<theta\>>,\ 
+
+  <\equation*>
+    f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>,\<theta\>|)>=Likelihood\<times\>Prior=<around*|{|<big|prod><rsub|i=1><rsup|n>f<around*|(|x<rsub|i><around*|\||\<theta\>|\|>|)>|}>\<times\>\<pi\><around*|\<nobracket\>||(>\<theta\>
+  </equation*>
+
+  <\equation*>
+    p<around*|(||)>
+  </equation*>
 
   \;
 
@@ -245,6 +258,9 @@
 
   denote the Fisher inoformation for a single sample.
 
+  Mark: remember how to cal the fisher information.
+  \<#770B\>\<#8C01\>\<#7684\>\<#65B9\>\<#5DEE\>\<#66F4\>\<#5C0F\>\<#FF0E\>
+
   <with|font-series|bold|Definition 3.5 (UMVUE)>. An estimator
   <math|\<theta\><rsup|\<ast\>>> is called a UMVUE of <math|\<theta\>> if it
   is unbiased and has the smallest variance among all unbiased estimators.
@@ -264,6 +280,20 @@
 
   <subsection|Sufficiency>
 
+  In many of the estimation problems, we need to summarize the information
+  contained in the sample <math|<with|font-series|bold|x>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><rsup|T>>.
+  That is, we need to find some functino of the sample that tells us just as
+  much about <math|\<theta\>> as the sample itself. Such a function would be
+  sufficient for estimation purpose and accordingly is called a
+  <with|font-shape|italic|sufficient statistic.>
+
+  Let <math|X<rsub|1>,\<ldots\>,X<rsub|n><above|\<sim\>|iid>f<around*|(|x;\<mu\>,\<sigma\><rsup|2>|)>>,
+  then <math|X<rsub|1>,X<rsub|2>,\<ldots\>,X<rsub|n>> are called
+  <with|font-shape|italic|raw data.> The quantities such as the sample mean
+  <math|<above|X|->>, the sample variance <math|S<rsup|2>> and
+  <math|X<rsub|<around*|(|1|)>>,X<rsub|<around*|(|n|)>>> are called
+  <with|font-shape|italic|reduced data.>\ 
+
   <with|font-series|bold|Definition 3.7(Sufficent statistc)>. A statistic
   <math|T<around*|(|x|)>> is said to be a sufficient statistic of
   <math|\<theta\>> if the conditional distribution of
@@ -276,21 +306,25 @@
     Pr<around*|{|X<rsub|1>=x<rsub|1>,\<ldots\>,X<rsub|n>=x<rsub|n>;\<theta\><around*|\||T<around*|(|<with|font-series|bold|x>|)>=t|\<nobracket\>>|}>=h<around*|(|<with|font-series|bold|x>|)>
   </equation*>
 
-  Thm 3.5 (Factorization theorem) A statistic
+  <with|font-series|bold|Thm 3.5> (Factorization theorem) A statistic
   <math|T<around*|(|<with|font-series|bold|x>|)>> is a sufficient statistc of
   the unknow parameter <math|\<theta\>> iff the joint pdf(or pmd) can be
-  written in the form
+  written in the form(\<#5145\>\<#8981\>\<#6761\>\<#4EF6\>)
 
   <\equation*>
     f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>;\<theta\>|)>=f<around*|(|<with|font-series|bold|x>;\<theta\>|)>=g<around*|(|T<around*|(|<with|font-series|bold|x>|)>;\<theta\>|)>\<times\>h<around*|(|<with|font-series|bold|x>|)>,
   </equation*>
 
-  Defination 3.8 (Joint sufficient statistics). Let
+  <with|font-series|bold|Defination 3.8> (Joint sufficient statistics). Let
   <math|X<rsub|1>,\<ldots\>,X<rsub|n>\<sim\>iid
   f<around*|(|x;<with|font-series|bold|\<theta\>>|)>.> The statistics
   <math|T<rsub|1><around*|(|<with|font-series|bold|x>|)>,\<ldots\>,T<rsub|r><around*|(|<with|font-series|bold|x>|)>>
   are said to be jointly sufficient if the conditional distribution of
-  <math|<with|font-series|bold|x>>, given
+  <math|<with|font-series|bold|x>>, giveN
+
+  <\equation*>
+    f<around*|(|<with|font-series|bold|x>;\<alpha\>,\<beta\>|)>=
+  </equation*>
 
   <subsection|Completeness>
 
@@ -305,9 +339,17 @@
   <math|g<around*|(|T|)>> is the unique UMVUE for
   <math|\<tau\><around*|(|\<theta\>|)>.>
 
-  \;
+  How to find the unique UMVUE for <math|\<theta\>>
 
-  \;
+  <subsection|Limiting Properties of MLE>
+
+  Let <math|g<around*|(|\<cdot\>|)>> is a function and its first derivative
+  <math|g<rprime|'><around*|(|\<cdot\>|)>> exists. Then, using the
+  first-order Taylor expansion, we have
+
+  <\equation*>
+    <tabular|<tformat|<table|<row|<cell|g<around*|(|<wide|\<theta\>|^><rsub|n>|)>\<approx\>>>>>>
+  </equation*>
 
   \;
 
@@ -319,6 +361,8 @@
     <item>https://en.wikipedia.org/wiki/Likelihood_function
 
     <item>https://www.zhihu.com/question/33567579
+
+    <item>Textbook from Tian
   </itemize>
 </body>
 
@@ -334,7 +378,9 @@
     <associate|auto-10|<tuple|4.2|3>>
     <associate|auto-11|<tuple|4.3|4>>
     <associate|auto-12|<tuple|4.4|4>>
-    <associate|auto-13|<tuple|5|4>>
+    <associate|auto-13|<tuple|4.5|4>>
+    <associate|auto-14|<tuple|5|?>>
+    <associate|auto-15|<tuple|5|?>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
     <associate|auto-4|<tuple|1.3|2>>

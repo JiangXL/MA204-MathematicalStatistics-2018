@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{amssymb,enumerate}
+
+%%%%%%%%%% Start TeXmacs macros
+\newcommand{\tmtextbf}[1]{{\bfseries{#1}}}
+\newcommand{\tmtextit}[1]{{\itshape{#1}}}
+\newenvironment{enumerateroman}{\begin{enumerate}[i.] }{\end{enumerate}}
+%%%%%%%%%% End TeXmacs macros
+
+\begin{document}
+
+Yuejian Mo,1151051
+
+\tmtextbf{Q3.18}. Let $(X_1, \ldots, X_n)$ be a random sample from the Pareto
+distribution with Lebesgus density $\theta a^{\theta} x^{- (\theta + 1) I_{(a,
+\infty)} (x)}$, where $\theta > 0$ and $a > 0$.
+\begin{enumerateroman}
+  \item Find the UMVUE of $\theta$ when $a$ is known.
+  
+  \item Find the UMVUE of $a$ when $\theta$ is known.
+  
+  \item Find the UMVUE's of $a$ and $\theta$.
+\end{enumerateroman}
+Solution:
+\begin{enumerateroman}
+  \item The joint Lebesgue density of $X_1, \ldots, X_n$ is
+  \[ f (x_1, \ldots, x_n) = \theta^n a^{n \theta} \exp \left\{ - (\theta + 1)
+     \sum_{i = 1}^n \log x_i \right\} I_{(a, \infty)} (x_{(1)}), \]
+  where $x_{(1)} = \min_{1 \leqslant i \leqslant n} x_i$. When \tmtextit{a} is
+  known, $T = \sum_{i = 1}^n \log X_i$ is complete and sufficient for $\theta$
+  and $T - n \log a$ has $a$ has he gamma distribution with shape parameter
+  $n$ and scale parameter $\theta^{- 1}$. Hence, $E T^{- 1} = \theta / (n -
+  1)$ and, thus, $(n - 1) / T$ is theUMVUE of $\theta$.
+  
+  \item When $\theta$ is known, $X_{(1)}$ is complete and sufficient for $a.$
+  Since $X_{(1)}$ has the Lebesgue density $n \theta a^{n \theta} x^{- (n
+  \theta + 1)} I_{(a, \infty)} (x), E X_{(1)} = n \theta a / (n \theta - 1) .$
+  Therefore, $(1 - n \theta) X_{(1)} / (n \theta)$ is the UMVUE of $a$.
+  
+  \item When both $a$ and $\theta$ are unknoen, $(Y, X_{(1)})$ is complete and
+  sufficient for $(a, \theta)$, where $Y = \sum_i (\log X_i - \log X_{(1)})$.
+  Also, $Y$ has the gamma distribution with shape parameter $n - 1$ and scale
+  parameter $\theta^{- 1}$ and $X_{(1)}$ and $Y$ are independent. Since $E
+  Y^{- 1} = \theta / (n - 2)$, $(n - 2) / Y$ is the UMVUE of $\theta$. Since
+  \[ \  \]
+  \[ \begin{array}{ll}
+       E \left\{ \left[ 1 - \frac{Y}{n (n - 1)} \right] X_{(1)} \right\} & =
+       \left[ 1 - \frac{E Y}{n (n - 1)} \right] E X_{(1)}\\
+       & = \left( 1 - \frac{1}{n \theta} \right) \frac{n \theta a}{n \theta -
+       1}\\
+       & = a,
+     \end{array} \]
+  $\left[ 1 - \frac{Y}{n (n - 1)} \right] X_{(1)}$ is the UMVUE of $a$.
+\end{enumerateroman}
+
+\end{document}

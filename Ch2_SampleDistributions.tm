@@ -162,10 +162,16 @@
 
   \;
 
-  The smalleest oder statisic
+  The smallest oder statisic
 
   <\equation*>
     G<rsub|n><around*|(|x|)>=Pr<around*|(|X<rsub|<around*|(|1|)>>\<leqslant\>x|)>=1-Pr<around*|(|min<around*|(|X<rsub|1>,\<cdots\>\<cdots\>X<rsub|n>|)>\<gtr\>x|)>
+  </equation*>
+
+  The\ 
+
+  <\equation*>
+    <tabular|<tformat|<table|<row|<cell|X<rsub|<around*|(|n|)>>=max<around*|{|X<rsub|1>,\<ldots\>,X<rsub|n>|}>>>|<row|<cell|G<rsub|n><around*|(|x|)>=>>>>>
   </equation*>
 
   The distribution of the r-th or
@@ -184,7 +190,7 @@
 
   <subsubsection|>
 
-  <subsubsection|Central limit therorem>
+  <subsubsection|Central Limit Therorem>
 
   <with|font-series|bold|Therorem 2.9> (Central limit theorem). Let
   <math|<around*|{|X<rsub|n>|}><rsub|n=1><rsup|\<infty\>>> be a sequence of
@@ -223,10 +229,10 @@
     <associate|auto-11|<tuple|2.4|2>>
     <associate|auto-12|<tuple|2.5|3>>
     <associate|auto-13|<tuple|2.5.1|3>>
-    <associate|auto-14|<tuple|2.5.2|?>>
-    <associate|auto-15|<tuple|2.5.3|?>>
-    <associate|auto-16|<tuple|2.5.4|?>>
-    <associate|auto-17|<tuple|3|?>>
+    <associate|auto-14|<tuple|2.5.2|3>>
+    <associate|auto-15|<tuple|2.5.3|3>>
+    <associate|auto-16|<tuple|2.5.4|3>>
+    <associate|auto-17|<tuple|3|3>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|2|1>>
     <associate|auto-4|<tuple|2.1|1>>
@@ -292,9 +298,25 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
 
+      <with|par-left|<quote|2tab>|2.5.1<space|2spc>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-13>>
+
+      <with|par-left|<quote|2tab>|2.5.2<space|2spc>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-14>>
+
+      <with|par-left|<quote|2tab>|2.5.3<space|2spc>Central limit therorem
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15>>
+
+      <with|par-left|<quote|2tab>|2.5.4<space|2spc>Some Challenging Questions
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Reference>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13><vspace|0.5fn>
+      <no-break><pageref|auto-17><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

@@ -79,7 +79,8 @@
 
   <section|The confidence Interval of Normal Mean>
 
-  When the variance is known
+  When the variance <math|\<sigma\><rsup|2>> is known, use the pivotal
+  quantity
 
   <\equation*>
     <around*|[|<with|font-series|bold|\<less\>X\<gtr\>->|]>
@@ -105,9 +106,14 @@
     \<less\>X<rsub|1>\<gtr\>-\<less\>X<rsub|2>\<gtr\>\<pm\>
   </equation*>
 
+  t-distrubution.
+
   <section|The Confidence Interval of the Difference of Two Normal Means>
 
-  <section|The Confidence Interval of Normal Variance>
+  <section|The CI of Normal Variance>
+
+  <big-table|<tabular|<tformat|<table|<row|<cell|>|<cell|Pivotal
+  Quantity>|<cell|>>|<row|<cell|<math|\<mu\>> is known>|<cell|>|<cell|>>>>>|>
 
   <section|The Confidence Interval of the Ratio of Two Normal Variances>
 
@@ -178,18 +184,21 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|7|2>>
-    <associate|auto-11|<tuple|8|?>>
-    <associate|auto-12|<tuple|1|?>>
+    <associate|auto-10|<tuple|6.3|2>>
+    <associate|auto-11|<tuple|7|2>>
+    <associate|auto-12|<tuple|8|2>>
+    <associate|auto-13|<tuple|1|?>>
+    <associate|auto-14|<tuple|1|?>>
+    <associate|auto-15|<tuple|1|?>>
     <associate|auto-2|<tuple|2|1>>
     <associate|auto-3|<tuple|3|2>>
     <associate|auto-4|<tuple|4|2>>
-    <associate|auto-5|<tuple|5|2>>
-    <associate|auto-6|<tuple|6|2>>
-    <associate|auto-7|<tuple|6.1|2>>
-    <associate|auto-8|<tuple|6.2|2>>
-    <associate|auto-9|<tuple|6.3|2>>
-    <associate|cb_post_title_url|<tuple|1|?>>
+    <associate|auto-5|<tuple|1|2>>
+    <associate|auto-6|<tuple|5|2>>
+    <associate|auto-7|<tuple|6|2>>
+    <associate|auto-8|<tuple|6.1|2>>
+    <associate|auto-9|<tuple|6.2|2>>
+    <associate|cb_post_title_url|<tuple|1|2>>
   </collection>
 </references>
 
@@ -241,6 +250,14 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>The
       shortest Confidence Interval> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|8<space|2spc>References>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11><vspace|0.5fn>
+
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc><locus|<id|%-56B3C58C8--56AB3C320>|<link|hyperlink|<id|%-56B3C58C8--56AB3C320>|<url|http://www.cnblogs.com/Belter/p/8330773.html>>|\<#6982\>\<#7387\>\<#8BBA\>\<#4E0E\>\<#6570\>\<#7406\>\<#7EDF\>\<#8BA1\>\<#53CA\>Python\<#5B9E\>\<#73B0\>>>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12><vspace|1fn>
     </associate>
   </collection>
 </auxiliary>
