@@ -78,6 +78,8 @@
     \;
   </solution>
 
+  \;
+
   <with|font-series|bold|2.3> Let <math|X<rsub|<around*|(|1|)>>\<less\>X<rsub|<around*|(|2|)>>\<less\>\<cdots\>\<less\>X<rsub|<around*|(|n|)>>>
   be the order statistics of a random sample of size <math|n> from the
   exponential distribution with pdf <math|f<around*|(|x|)>=e<rsup|-x>>,<math|x\<gtr\>0>,
