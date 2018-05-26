@@ -1,4 +1,4 @@
-<TeXmacs|1.99.5>
+<TeXmacs|1.99.6>
 
 <style|generic>
 
@@ -14,8 +14,9 @@
   1.1\ 
 
   <\enumerate-alpha>
-    <item> If <math|X\<sim\>Bionomial<around*|(|n,p|)>,then pmf is
-    <around*|(|<rsup|n><rsub|x>|)>p<rsup|x><around*|(|1-p|)><rsup|n-x>>
+    <item> If <math|X\<sim\>Bionomial<around*|(|n,p|)>,then mgf is <text|>>
+
+    \;
 
     <item> The mgf of <math|X> is <math|<around*|(|pe<rsup|t>+q|)><rsup|n>>,
     then
@@ -57,7 +58,7 @@
     <big-table|<block|<tformat|<table|<row|<cell|X+Y>|<cell|2>|<cell|3>|<cell|4>|<cell|5>|<cell|6>|<cell|7>|<cell|8>>|<row|<cell|Probability>|<cell|1/16>|<cell|1/16>|<cell|3/16>|<cell|2/16>|<cell|4/16>|<cell|1/16>|<cell|4/16>>>>>|>
   </enumerate-alpha>
 
-  1.3
+  1.3\ 
 
   <\enumerate-alpha>
     <item>Using the point-wise formula, hhe marginal distribution of <math|X>
@@ -128,7 +129,7 @@
     f<around*|(|x|)>d x-<around*|(|<big|int><rsub|-\<infty\>><rsup|\<infty\>>x
     f<around*|(|x|)>d x|)><rsup|2>=<frac|11|16>-<frac|11<rsup|2>|48<rsup|2>>\<cong\>0.635>
 
-    \;
+    (wrong)
   </enumerate-alpha>
 
   1.10
@@ -164,9 +165,6 @@
 
   <section|Part II>
 </body>
-
-<initial|<\collection>
-</collection>>
 
 <\references>
   <\collection>

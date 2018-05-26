@@ -26,7 +26,7 @@
       Var<around*|(|X|)>=E<around*|(|Var<around*|(|X<around*|\||Y|\<nobracket\>>|)>|)>+Var<around*|(|E<around*|(|X<around*|\||Y|\<nobracket\>>|)>|)>
     </equation*>
 
-    <item>From conditional densities to marginal densities
+    <item>From conditional densities to marginal densitie
 
     Based on\ 
 
@@ -50,6 +50,8 @@
     <\equation*>
       <tabular|<tformat|<table|<row|<cell|p<rsub|i>=Pr<around*|(|X=x<rsub|i>|)><rsub|>\<propto\><frac|Pr<around*|(|X=x<rsub|i><around*|\||Y=yj<rsub|0>|\<nobracket\>>|)>|Pr<around*|(|Y=y<rsub|j0><around*|\||X=X<rsub|i>|\<nobracket\>>|)>><wide|=|^>q<rsub|i>,>>|<row|<cell|p<rsub|i>=<frac|q<rsub|i>|<big|sum><rsub|i<rprime|'>>q<rsub|i><rprime|'>>,>>|<row|<cell|Pr<around*|(|X=x<rsub|i>|)>=<around*|(|<big|sum><rsub|j><frac|Pr<around*|(|Y=y<rsub|j><around*|\||X=x<rsub|i>|\<nobracket\>>|)>|Pr<around*|(|X=x<rsub|i><around*|\||Y=y<rsub|j>|\<nobracket\>>|)>>|)><rsup|-1>.>>>>>
     </equation*>
+
+    (Why the kernel is known?)
 
     <\big-table|<tabular|<tformat|<cwith|2|-1|1|2|cell-valign|c>|<cwith|1|-1|1|-1|cell-tborder|1ln>|<cwith|1|-1|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|-1|cell-lborder|0ln>|<cwith|1|-1|1|-1|cell-rborder|0ln>|<table|<row|<cell|>|<cell|pmf/pdf>|<cell|>>|<row|<cell|Bernoulli(p)>|<cell|<math|f<rsub|X><around*|(|x|)>=<around*|{|<tabular|<tformat|<table|<row|<cell|p>|<cell|,x=1>>|<row|<cell|1-p>|<cell|,x\<neq\>1>>>>>|\<nobracket\>>>>|<cell|>>|<row|<cell|Binomial(n,p)>|<cell|<math|f<rsub|X><around*|(|x|)>=<around*|(|<tabular|<tformat|<table|<row|<cell|n>>|<row|<cell|x>>>>>|)>p<rsup|x><around*|(|1-p|)><rsup|n-x>>>|<cell|<image|https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Binomial_distribution_pmf.svg/434px-Binomial_distribution_pmf.svg.png|310px|||>>>|<row|<cell|Uniform(<with|font-shape|italic|a,b>)>|<cell|<math|><tabular|<tformat|<table|<row|<cell|<math|f<rsub|X><around*|(|x|)>=<around*|{|<tabular|<tformat|<table|<row|<cell|<frac|1|b-a>>|<cell|,a\<leqslant\>x\<leqslant\>b>>|<row|<cell|0>|<cell|,elsewhere>>>>>|\<nobracket\>>>>>|<row|<cell|<math|E<around*|(|X|)>=<frac|a+b|2>>>>|<row|<cell|<math|Var<around*|(|X|)>=<frac|<around*|(|b-a|)><rsup|2>|12>>>>|<row|<cell|mgf:
     <math|<frac|e<rsup|t b>-e<rsup|t a>|t<around*|(|b-a|)>>>>>>>>>|<cell|<samp|><image|https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Uniform_Distribution_PDF_SVG.svg/250px-Uniform_Distribution_PDF_SVG.svg.png|350px|||>>>|<row|<cell|<strong|Beta(<with|font-shape|italic|a,b>)>>|<cell|<tabular|<tformat|<table|<row|<cell|<math|f<rsub|X><around*|(|x|)>=<frac|x<rsup|a-1><around*|(|1-x|)><rsup|b-1>|B<around*|(|a,b|)>>>,
@@ -162,16 +164,16 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|1|../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-10|<tuple|5|4|../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-2|<tuple|1|2|../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-3|<tuple|2|3|../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-4|<tuple|2.1|3|../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-5|<tuple|2.2|3|../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-6|<tuple|2.3|4|../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-7|<tuple|2.4|4|../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-8|<tuple|3|4|../../.TeXmacs/texts/scratch/no_name_1.tm>>
-    <associate|auto-9|<tuple|4|4|../../.TeXmacs/texts/scratch/no_name_1.tm>>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|5|4>>
+    <associate|auto-2|<tuple|1|2>>
+    <associate|auto-3|<tuple|2|3>>
+    <associate|auto-4|<tuple|2.1|3>>
+    <associate|auto-5|<tuple|2.2|3>>
+    <associate|auto-6|<tuple|2.3|3>>
+    <associate|auto-7|<tuple|2.4|4>>
+    <associate|auto-8|<tuple|3|4>>
+    <associate|auto-9|<tuple|4|4>>
   </collection>
 </references>
 
