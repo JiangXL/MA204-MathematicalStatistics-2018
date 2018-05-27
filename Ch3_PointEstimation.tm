@@ -1,4 +1,4 @@
-<TeXmacs|1.99.5>
+<TeXmacs|1.99.6>
 
 <style|generic>
 
@@ -99,6 +99,16 @@
   <math|<with|font-series|bold|\<theta\>>>. There is no guarantee that the
   MLE exists or if does whether it is unique.
 
+  In general, the MLE <math|<wide|<with|font-series|bold|\<theta\>>|^>> is
+  the solution to the score equation
+
+  <\equation*>
+    \<nabla\>\<ell\><around*|(|<with|font-series|bold|\<theta\>>|)><wide|=|^><frac|\<partial\>\<ell\><around*|(|<with|font-series|bold|\<theta\>>|)>|\<partial\><around*|(|<with|font-series|bold|\<theta\>>|)>>=<around*|(|<tabular|<tformat|<table|<row|<cell|<frac|\<partial\>\<ell\><around*|(|<with|font-series|bold|\<theta\>>|)>|\<partial\>\<theta\><rsub|1>>>>|<row|<cell|\<vdots\>>>|<row|<cell|<frac|\<partial\>\<ell\><around*|(|<with|font-series|bold|\<theta\>>|)>|\<partial\><around*|(|\<theta\><rsub|n>|)>>>>>>>|)>
+  </equation*>
+
+  There is no guarantee that the MLE exists or if it does whether it is
+  unqiue.
+
   <subsection|The invariance property of MLE>
 
   <with|font-series|bold|Theorem 3.1>: (Invariance of MLE). Let
@@ -145,14 +155,34 @@
   The joint pdf of <math|X<rsub|1>,\<ldots\>,X<rsub|n>> and <math|\<theta\>>,\ 
 
   <\equation*>
-    f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>,\<theta\>|)>=Likelihood\<times\>Prior=<around*|{|<big|prod><rsub|i=1><rsup|n>f<around*|(|x<rsub|i><around*|\||\<theta\>|\|>|)>|}>\<times\>\<pi\><around*|\<nobracket\>||(>\<theta\>
+    f<around*|(|<with|font-series|bold|x>,<with|font-series|bold|\<theta\>>|)>f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>,\<theta\>|)>=Likelihood\<times\>Prior=<around*|{|<big|prod><rsub|i=1><rsup|n>f<around*|(|x<rsub|i><around*|\||\<theta\>|\|>|)>|}>\<times\>\<pi\><around*|(|\<theta\>|)>
   </equation*>
+
+  Then determinie the <with|font-shape|italic|posterior density> of
+  <math|<with|font-series|bold|\<theta\>>>
 
   <\equation*>
-    p<around*|(||)>
+    p<around*|(|<with|font-series|bold|\<theta\>><around*|\||<with|font-series|bold|x>|\<nobracket\>>|)>=<frac|f<around*|(|<with|font-series|bold|x>,<with|font-series|bold|\<theta\>>|)>|f<around*|(|<with|font-series|bold|x>|)>>=c<rsup|-1>f<around*|(|<with|font-series|bold|x>,<with|font-series|bold|\<theta\>>|)>\<propto\>f<around*|(|<with|font-series|bold|x>,<with|font-series|bold|\<theta\>>|)>=Likelihood\<times\>Prior
   </equation*>
 
-  \;
+  where <math|f<around*|(|<with|font-series|bold|x>|)>=<big|int><rsub|<with|font-series|bold|\<Theta\>>><around*|(|<with|font-series|bold|x>,<with|font-series|bold|\<theta\>>|)><wide|=|^>c>
+  is the normalizing constant of <math|p<around*|(|<with|font-series|bold|\<theta\>><around*|\||<with|font-series|bold|x>|\<nobracket\>>|)>>
+  because <math|\<b-up-x\>=<with|font-series|bold|x>> is given. The Bayesian
+  estimate of <math|<with|font-series|bold|\<theta\>>> is defined by
+
+  <\equation*>
+    E<around*|(|<with|font-series|bold|\<theta\><around*|\||<with|font-series|bold|x>|\<nobracket\>>>|)>=<big|int><rsub|<with|font-series|bold|\<Theta\>>><with|font-series|bold|\<theta\>>\<cdot\>p<around*|(|<with|font-series|bold|\<theta\>><around*|\||<with|font-series|bold|x>|\<nobracket\>>|)>\<mathd\>
+    <with|font-series|bold|\<theta\>>.
+  </equation*>
+
+  <big-table|<tabular|<tformat|<table|<row|<cell|>|<cell|MLE>|<cell|Bayesian
+  estimator>>|<row|<cell|1>|<cell|<math|<with|font-series|bold|\<theta\>>>: a
+  fixed and unknown parameter voctor>|<cell|<math|<with|font-series|bold|\<theta\>>>:
+  A random vector with a prior density <math|\<pi\><around*|(|<with|font-series|bold|\<theta\>>|)>>>>|<row|<cell|2>|<cell|>|<cell|>>|<row|<cell|3>|<cell|>|<cell|>>|<row|<cell|4>|<cell|<math|<wide|<with|font-series|bold|\<theta\>>|^>=arg
+  max<rsub|\<theta\>\<in\>\<Theta\>>L<around*|(|<with|font-series|bold|\<theta\>>|)>:>MLE>|<cell|<math|<with|font-series|bold|<above|\<theta\>|\<sim\>>>=arg
+  max<rsub|<with|font-series|bold|\<theta\>>\<in\><with|font-series|bold|\<Theta\>>>
+  p<around*|(|<with|font-series|bold|\<theta\>><around*|\||<with|font-series|bold|x>|\<nobracket\>>|)>:>Posterior
+  mode>>>>>|>
 
   <\section>
     Properties of Estimators
@@ -375,11 +405,11 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|4.2|3>>
-    <associate|auto-11|<tuple|4.3|4>>
-    <associate|auto-12|<tuple|4.4|4>>
-    <associate|auto-13|<tuple|4.5|4>>
-    <associate|auto-14|<tuple|5|?>>
+    <associate|auto-10|<tuple|4.1|3>>
+    <associate|auto-11|<tuple|4.2|4>>
+    <associate|auto-12|<tuple|4.3|4>>
+    <associate|auto-13|<tuple|4.4|4>>
+    <associate|auto-14|<tuple|4.5|4>>
     <associate|auto-15|<tuple|5|?>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
@@ -387,8 +417,8 @@
     <associate|auto-5|<tuple|1.4|2>>
     <associate|auto-6|<tuple|2|2>>
     <associate|auto-7|<tuple|3|2>>
-    <associate|auto-8|<tuple|4|2>>
-    <associate|auto-9|<tuple|4.1|2>>
+    <associate|auto-8|<tuple|1|2>>
+    <associate|auto-9|<tuple|4|2>>
   </collection>
 </references>
 
@@ -444,9 +474,13 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
 
+      <with|par-left|<quote|1tab>|4.5<space|2spc>Limiting Properties of MLE
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-13>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Reference>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13><vspace|0.5fn>
+      <no-break><pageref|auto-14><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
