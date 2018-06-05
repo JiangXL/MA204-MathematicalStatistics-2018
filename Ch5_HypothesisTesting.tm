@@ -171,13 +171,13 @@
 
   <section|Likelihood Ratio Test>
 
-  THe Ney-man-Pearson Lemma provides a means of constructing the most
+  The Ney-man-Pearson Lemma provides a means of constructing the most
   powerful crtical region for testing a simple <math|H<rsub|0>> against
   <math|H<rsub|1>>, but it does not always apply to composite hypothesis.
   When a UMPT of size <math|\<alpha\>> does not exist, we may employ the
   <with|font-shape|italic|likehood ratio test>(LRT). The LRT is a general
   method/tool for finding a test statistic or constructing the critital
-  region of a test, it can be applied to andy <math|H<rsub|0>> and
+  region of a test, it can be applied to any <math|H<rsub|0>> and
   <math|H<rsub|1>>, but the resulting test may not be optimal; while the MPT
   or UMPT emphasies theat the derived test of size <math|\<alpha\>> has the
   <with|font-shape|italic|highest power> among a class of tests with size
@@ -266,7 +266,7 @@
   statistic is
 
   <\equation*>
-    Z<rsub|0><long-arrow|\<rubber-equal\>|\<wedge\>><frac|<wide|X|\<bar\>>-\<mu\><rsub|0>|\<sigma\><rsub|0>/n>=<frac|<around*|(|<wide|X|\<bar\>>-\<mu\>|)>+<around*|(|\<mu\>+\<mu\><rsub|0>|)>|\<sigma\><rsub|0>/<sqrt|n>>=Z+<frac|\<mu\>-\<mu\><rsub|0>|\<sigma\><rsub|0>/<sqrt|n>>
+    Z<rsub|0><wide|=|^><frac|<wide|X|\<bar\>>-\<mu\><rsub|0>|\<sigma\><rsub|0>/n>=<frac|<around*|(|<wide|X|\<bar\>>-\<mu\>|)>+<around*|(|\<mu\>+\<mu\><rsub|0>|)>|\<sigma\><rsub|0>/<sqrt|n>>=Z+<frac|\<mu\>-\<mu\><rsub|0>|\<sigma\><rsub|0>/<sqrt|n>>
   </equation*>
 
   where <math|H<rsub|0>> is true, i.e., <math|\<mu\>=\<mu\><rsub|0>>, we
@@ -300,7 +300,70 @@
 
   .
 
+  <subsection|p-Value >
+
+  <\equation*>
+    <tabular|<tformat|<table|<row|<cell|p-value>|<cell|=>|<cell|2Pr<around*|(|Z\<geqslant\><around*|\||z<rsub|0>|\|>|)>
+    >|<cell|if H<rsub|1>:\<mu\>\<neq\>\<mu\>>>|<row|<cell|>|<cell|=>|<cell|Pr<around*|(|Z<rsup|2>\<geqslant\>z<rsup|2><rsub|0>|)>>|<cell|>>|<row|<cell|>|<cell|=>|<cell|Pr<around*|{|\<chi\><rsup|2><around*|(|1|)>\<geqslant\>z<rsub|0><rsup|2>|}>>|<cell|>>|<row|<cell|p-value>|<cell|=>|<cell|Pr<around*|(|Z\<geqslant\>z<rsub|0>|)>>|<cell|if
+    H<rsub|1>:\<mu\>\<gtr\>\<mu\><rsub|0>>>|<row|<cell|p-value>|<cell|=>|<cell|Pr<around*|(|Z\<leqslant\>z<rsub|0>|)>>|<cell|if
+    H<rsub|1>:\<mu\>\<less\>\<mu\><rsub|0>>>>>>
+  </equation*>
+
+  where <math|Z> is specified by (5.29) and <math|z<rsub|0>> given by (5.30)
+  denotes the observed value of <math|Z<rsub|0>>.
+
   \;
+
+  Two approaches should be equivalent. The
+
+  <subsection|One-sample t test>
+
+  <subsection|Two-sample t test>
+
+  <\enumerate-numeric>
+    <item>Find a test statisti
+
+    \;
+
+    <item>To determine a critical region
+
+    <item>
+  </enumerate-numeric>
+
+  <section|Goodness of Fit Test(\<#62DF\>\<#5408\>\<#4F18\>\<#5EA6\>\<#68C0\>\<#9A8C\>)>
+
+  Let <math|X<rsub|1>,\<ldots\>,X<rsub|n><above|\<sim\>|iid>F<around*|(|x;<with|font-series|bold|\<theta\>>|)>>
+  and <math|x<rsub|1>,\<ldots\>,x<rsub|n>> denote their realizations, where
+  <math|<with|font-series|bold|\<theta\>>=<around*|(|\<theta\><rsub|1>,\<ldots\>\<comma\>\<theta\><rsub|q>|)><rsup|T>>
+  is the parameter vector. \ 
+
+  When we obtain the data\<#FF0C\>but how to find out and check the CDF of
+  population.
+
+  Let <math|n> bve a positive integer. If a random vector
+  <math|<around*|(|Y<rsub|1>,\<ldots\>\<comma\>Y<rsub|m>|)><rsup|T>> has the
+  following joint density
+
+  <\equation*>
+    f<around*|(|y<rsub|1>,\<ldots\>,y<rsub|m>:p<rsub|1>,\<ldots\>,p<rsub|m>|)>=<around*|(||)>
+  </equation*>
+
+  Theorem 5.1. Let <math|<around*|(|N<rsub|1>,\<ldots\>N<rsub|m>|)><rsup|T>\<sim\>Mulitinomia<around*|(|n;p<rsub|1>,\<ldots\>.,p<rsub|m>|)>>,
+  where <math|n=<big|sum><rsub|j=1><rsup|m>p<rsub|j>=1>. Define
+
+  <\equation*>
+    Q<rsub|n>=<big|sum><rsub|j=1><rsup|m><frac|<around*|(|N<rsub|j>-n
+    p<rsub|j>|)><rsup|2>|n p<rsub|j>>
+  </equation*>
+
+  Then <math|Q<rsub|n>> has a limiting distribution, as <math|n > approaches
+  infinity, the chi-square distribution with <math|m-1> degrees of freedom,
+  i.e.
+
+  <\equation*>
+    Q<rsub|n><above|\<rightarrow\>|L>\<chi\><rsup|2><around*|(|m-1|)>
+    as<space|1em>n\<rightarrow\>\<infty\>
+  </equation*>
 
   \;
 </body>
@@ -314,10 +377,15 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|1|?>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-3|<tuple|2|2>>
     <associate|auto-4|<tuple|3|3>>
-    <associate|auto-5|<tuple|4|?>>
+    <associate|auto-5|<tuple|4|4>>
+    <associate|auto-6|<tuple|4.1|?>>
+    <associate|auto-7|<tuple|4.2|?>>
+    <associate|auto-8|<tuple|4.3|?>>
+    <associate|auto-9|<tuple|5|?>>
   </collection>
 </references>
 
@@ -338,6 +406,10 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Likelihood
       Ratio Test> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Test
+      on Normal Means> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
