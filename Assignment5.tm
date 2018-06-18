@@ -55,6 +55,16 @@
       <item>Express the power function as an integral.
     </enumerate>
 
+    <with|font-series|bold|Solution:>
+
+    <\enumerate>
+      <item>
+
+      <item>
+
+      <item>
+    </enumerate>
+
     <item>Let <math|X<rsub|1>,\<ldots\>,X<rsub|n>> be a random sample from\ 
 
     <\equation*>
@@ -73,10 +83,16 @@
       <math|H<rsub|1>:\<theta\>\<neq\>1>.
     </enumerate>
 
+    <with|font-series|bold|Solution:>
+
+    \;
+
     <item>Let <math|X<rsub|1>,\<ldots\>,X<rsub|n><above|\<sim\>|iid>N<around*|(|\<theta\>,1|)>>.
     Find the UMPT of size <math|\<alpha\>> for testing
     <math|H<rsub|0>:\<theta\>\<geqslant\>\<theta\><rsub|0>> against
     <math|H<rsub|1>:\<theta\>\<less\>\<theta\><rsub|0>>.
+
+    \;
 
     <item>Let <math|X<rsub|1>,\<ldots\>.,X<rsub|n><above|\<sim\>|iid>N<around*|(|\<mu\>,\<sigma\><rsup|2>|)>>
     with unknown mean <math|\<mu\>>. Find the LRT with size <math|\<alpha\>>
@@ -92,9 +108,53 @@
 
   <section|Part II>
 
-  <\description>
-    <item*|5.12>
-  </description>
+  <with|font-series|bold|Q5.12.> A batch of 100 resistors have an average of
+  101.5 Ohms. Assuming a population standard deviation of 5 Ohms.
+
+  <\enumerate>
+    <item>Test wheterh the population mean is 100 Ohms at a level of
+    significance 0.05.
+
+    <item>Compute the <math|p>-value.
+  </enumerate>
+
+  <\answer>
+    \;
+
+    <\enumerate>
+      <item><math|H<rsub|0>:\<mu\>=100,H<rsub|1>:\<mu\>\<neq\>100>
+
+      Test statistic is <math|<overline|X>>. Reject <math|H<rsub|0>> if
+
+      <\equation*>
+        <overline|X>\<less\>100-z<rsub|0.025><frac|\<sigma\>|<sqrt|n>>=100-1.96\<times\><frac|5|10>=99.02
+      </equation*>
+
+      or
+
+      <\equation*>
+        <overline|X>\<gtr\>100+z<rsub|0.05><frac|\<sigma\>|<sqrt|n>>=100+1.96\<times\><frac|5|10>=100.98
+      </equation*>
+
+      <math|<overline|X>=101.5> therefore, reject <math|H<rsub|0>>.
+
+      <item>The observed <with|font-shape|italic|z>-value is
+
+      <\equation*>
+        Z=<frac|<overline|X>-100|\<sigma\>/<sqrt|n>>=<frac|101.5-100|5/<sqrt|100>>=3.
+      </equation*>
+
+      Then, the <math|p>-value is
+
+      <\equation*>
+        p=2Pr<around*|(|Z\<gtr\>3|)>=2\<times\>0.0013=0.0026
+      </equation*>
+
+      This mean that <math|H<rsub|0>> could have been rejected at
+      significance level <math|\<alpha\>=0.0026> which is much stronger than
+      rejecting it a 0.05.
+    </enumerate>
+  </answer>
 </body>
 
 <\initial>

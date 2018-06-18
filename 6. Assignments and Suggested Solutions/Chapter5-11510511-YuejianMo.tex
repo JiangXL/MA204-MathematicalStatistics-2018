@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[british]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{theorem}
+
+%%%%%%%%%% Start TeXmacs macros
+\newcommand{\tmtextbf}[1]{{\bfseries{#1}}}
+\newcommand{\tmtextit}[1]{{\itshape{#1}}}
+{\theorembodyfont{\rmfamily}\newtheorem{answer}{Answer}}
+%%%%%%%%%% End TeXmacs macros
+
+\begin{document}
+
+Yuejian Mo, 11510511
+
+\tmtextbf{Q5.12.} A batch of 100 resistors have an average of 101.5 Ohms.
+Assuming a population standard deviation of 5 Ohms.
+\begin{enumerate}
+  \item Test wheterh the population mean is 100 Ohms at a level of
+  significance 0.05.
+  
+  \item Compute the $p$-value.
+\end{enumerate}
+\begin{answer}
+  
+  \begin{enumerate}
+    \item $H_0 : \mu = 100, H_1 : \mu \neq 100$
+    
+    Test statistic is $\overline{X}$. Reject $H_0$ if
+    \[ \overline{X} < 100 - z_{0.025} \frac{\sigma}{\sqrt{n}} = 100 - 1.96
+       \times \frac{5}{10} = 99.02 \]
+    or
+    \[ \overline{X} > 100 + z_{0.05} \frac{\sigma}{\sqrt{n}} = 100 + 1.96
+       \times \frac{5}{10} = 100.98 \]
+    $\overline{X} = 101.5$ therefore, reject $H_0$.
+    
+    \item The observed \tmtextit{z}-value is
+    \[ Z = \frac{\overline{X} - 100}{\sigma / \sqrt{n}} = \frac{101.5 - 100}{5
+       / \sqrt{100}} = 3. \]
+    Then, the $p$-value is
+    \[ p = 2 \Pr (Z > 3) = 2 \times 0.0013 = 0.0026 \]
+    This mean that $H_0$ could have been rejected at significance level
+    $\alpha = 0.0026$ which is much stronger than rejecting it a 0.05.
+  \end{enumerate}
+\end{answer}
+
+\tmtextbf{Reference}
+\begin{itemize}
+  \item
+  http://www.sci.utah.edu/\~{}arpaiva/classes/UT\_ece3530/hypothesis\_testing.pdf
+\end{itemize}
+
+\end{document}

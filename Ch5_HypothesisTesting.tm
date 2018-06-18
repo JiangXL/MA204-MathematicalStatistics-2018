@@ -164,28 +164,27 @@
     then <math|T<rsub|1>> is better than <math|T<rsub|2>>.
   </itemize-minus>
 
-  \;
-
   <section|The Neyman-Pearson Lemma>
 
   If there are a set of <math|<around*|{|T<rsub|j>|}><rsub|j=1><rsup|\<infty\>>>
   to test <math|H<rsub|0>> against <math|H<rsub|1>>, we would like to
-  identify the <with|font-shape|italic|most powerful test>(MPI) for the case
+  identify the <with|font-shape|italic|most powerful test>(MPT) for the case
   where both <math|H<rsub|0>> and <math|H<rsub|1>> are simple, and identify
-  <with|font-shape|italic|th uniformly most powerful test>(UMPT) for the case
-  where both <math|H<rsub|0>> and <math|H<rsub|1>> are composite.
+  <with|font-shape|italic|the uniformly most powerful test>(UMPT) for the
+  case where both <math|H<rsub|0>> and <math|H<rsub|1>> are composite.
 
   Consider to test <math|H<rsub|0>:\<theta\>\<in\>\<Theta\><rsub|0>> against
   <math|H<rsub|1>:\<theta\>\<in\>\<Theta\><rsub|1>=\<Theta\>-\<Theta\><rsub|0>>.
   A test <math|\<varphi\>> with critical region
   <math|<with|math-font|cal|<with|math-font|Bbb*|\<bbb-C\>>>> is said to have
-  <with|font-shape|italic|size> <math|\<alpha\>> if
+  <with|font-shape|italic|size> <math|\<alpha\>>(\<#663E\>\<#8457\>\<#6027\>\<#6C34\>\<#5E73\>)
+  if
 
   <\equation*>
-    sup<rsub|\<theta\>\<in\>\<Theta\><rsub|0>>p<rsub|\<varphi\>><around*|(|\<theta\>|)>=sup<rsub|\<theta\>\<in\>\<Theta\><rsub|0>>Pr<around*|(|<with|math-font|Bbb*|x>\<in\><with|math-font|Bbb*|\<bbb-C\>><around*|\||\<theta\>|\<nobracket\>>|)>=sup<rsub|\<theta\>\<in\>\<Theta\><rsub|0>>\<alpha\><rsub|\<varphi\>><around*|(|\<theta\>|)>=\<alpha\>
+    sup<rsub|\<theta\>\<in\>\<Theta\><rsub|0>>p<rsub|\<varphi\>><around*|(|\<theta\>|)>=sup<rsub|\<theta\>\<in\>\<Theta\><rsub|0>>Pr<around*|(|\<b-up-x\>\<in\><with|math-font|Bbb*|\<bbb-C\>><around*|\||\<theta\>|\<nobracket\>>|)>=sup<rsub|\<theta\>\<in\>\<Theta\><rsub|0>>\<alpha\><rsub|\<varphi\>><around*|(|\<theta\>|)>=\<alpha\>
   </equation*>
 
-  where <math|<with|math-font|Bbb*|x>=<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>|)><rsup|T>.>
+  where <math|\<b-up-x\>=<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>|)><rsup|T>.>
 
   When <math|H<rsub|0>> is a simple null hypothesis; i.e., when
   <math|\<Theta\><rsub|0>=<around*|{|\<theta\><rsub|0>|}>>, from above
@@ -195,8 +194,10 @@
     sup<rsub|\<theta\>\<in\>\<Theta\><rsub|0>>p<rsub|\<varphi\>><around*|(|\<theta\>|)>=\<alpha\><rsub|\<varphi\>><around*|(|\<theta\><rsub|0>|)>=\<alpha\>
   </equation*>
 
-  Here we introduce <with|font-shape|italic|the most powerful test> with size
-  <math|\<alpha\>> for testing <math|H<rsub|0>:\<theta\>=\<theta\><rsub|0>>
+  Here we introduce <with|font-shape|italic|<with|font-series|bold|the most
+  powerful test>>. A test <math|\<varphi\>> with critical region
+  <math|<with|math-font|Bbb*|\<bbb-C\>>> is said to be the most powerful test
+  with size <math|\<alpha\>> for testing <math|H<rsub|0>:\<theta\>=\<theta\><rsub|0>>
   against <math|H<rsub|1>:\<theta\>=\<theta\><rsub|1><rsub|>>, if
 
   <\equation*>
@@ -213,6 +214,21 @@
   values.
 
   <strong|>
+
+  <\lemma>
+    (Neyman-Pearson Lemma). Assume that <math|X<rsub|1>,\<ldots\>,X<rsub|n><above|\<sim\>|iid>f<around*|(|x;\<theta\>|)>>.
+    Let the likehood function be <math|L<around*|(|\<theta\>|)>=L<around*|(|\<theta\>;<with|font-series|bold|x>|)>>.
+    Then a test <math|\<varphi\>> with critical region
+
+    <\equation*>
+      <with|math-font|Bbb*|\<bbb-C\>>=<around*|{|<with|font-series|bold|x>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><rsup|T>:<frac|L<around*|(|\<theta\><rsub|0>|)>|L<around*|(|\<theta\><rsub|1>|)>>\<leqslant\>k|}>
+    </equation*>
+
+    and size <math|\<alpha\>> is the most powerful test of size
+    <math|\<alpha\>> for testing <math|H<rsub|0>:\<theta\>=\<theta\><rsub|0>>
+    against <math|H<rsub|1>:\<theta\>=\<theta\><rsub|1>>, where <math|k> is a
+    value determined by size <math|\<alpha\>>.
+  </lemma>
 
   <with|font-shape|italic|the most powerful test>(MPT)
 
@@ -441,62 +457,68 @@
   <\collection>
     <associate|font-base-size|11>
     <associate|page-medium|paper>
+    <associate|page-type|a4>
+    <associate|page-width-margin|false>
   </collection>
 </initial>
 
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|5|?>>
-    <associate|auto-2|<tuple|1|1>>
+    <associate|auto-10|<tuple|5|6>>
+    <associate|auto-2|<tuple|1|2>>
     <associate|auto-3|<tuple|2|2>>
     <associate|auto-4|<tuple|2|3>>
     <associate|auto-5|<tuple|3|4>>
     <associate|auto-6|<tuple|4|5>>
-    <associate|auto-7|<tuple|4.1|5>>
-    <associate|auto-8|<tuple|4.2|5>>
-    <associate|auto-9|<tuple|4.3|5>>
+    <associate|auto-7|<tuple|4.1|6>>
+    <associate|auto-8|<tuple|4.2|6>>
+    <associate|auto-9|<tuple|4.3|6>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|table>
-      <tuple|normal|<surround|<hidden|<tuple>>||>|<pageref|auto-2>>
+      <tuple|normal|<surround|<hidden|<tuple>>||\<#6CD5\>\<#5B98\>\<#5224\>\<#51B3\>>|<pageref|auto-2>>
+
+      <tuple|normal|<surround|<hidden|<tuple>>||Use type I and I error
+      function to measure error>|<pageref|auto-3>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Type
-      I error and Type II error> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      I error and Type II error, Power function>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>The
       Neyman-Pearson Lemma> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3><vspace|0.5fn>
+      <no-break><pageref|auto-4><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Likelihood
       Ratio Test> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4><vspace|0.5fn>
+      <no-break><pageref|auto-5><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Test
       on Normal Means> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-5><vspace|0.5fn>
+      <no-break><pageref|auto-6><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|4.1<space|2spc>p-Value
       \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6>>
+      <no-break><pageref|auto-7>>
 
       <with|par-left|<quote|1tab>|4.2<space|2spc>One-sample t test
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>>
+      <no-break><pageref|auto-8>>
 
       <with|par-left|<quote|1tab>|4.3<space|2spc>Two-sample t test
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8>>
+      <no-break><pageref|auto-9>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Goodness
       of Fit Test(\<#62DF\>\<#5408\>\<#4F18\>\<#5EA6\>\<#68C0\>\<#9A8C\>)>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9><vspace|0.5fn>
+      <no-break><pageref|auto-10><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
