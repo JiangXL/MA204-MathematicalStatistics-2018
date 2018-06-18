@@ -4,8 +4,8 @@
 
 <\body>
   <doc-data|<doc-title|Chapter 5 Hypothesis
-  Testing>|<doc-author|<author-data|<author-name|yuejian
-  mo>|<\author-affiliation>
+  Testing>|<doc-author|<author-data|<author-name|Yuejian
+  Mo>|<\author-affiliation>
     <date|>
   </author-affiliation>>>>
 
@@ -20,18 +20,23 @@
   Here are four steps of hypothesis testing:
 
   <\itemize-minus>
-    <item><with|font-shape|italic|State the hypothese.> This involes stating
-    the null and alternative by hypotheses.
+    <item><with|font-shape|italic|State the hypotheses.> This involes stating
+    the null and alternative by hypotheses.\ 
 
-    <item><with|font-shape|italic|formulate an analysis plan>. The analysis
+    <item><with|font-shape|italic|Formulate an analysis plan>. The analysis
     plan describle how to use sample data to evaluate the null hypothesis.\ 
 
-    <item><with|font-shape|italic|analyze sample data.>
+    <item><with|font-shape|italic|Analyze sample data.> Find the value of the
+    test statistic(mean score, proportion,
+    <with|font-shape|italic|t>-statistic, <with|font-shape|italic|z>-score,
+    etc) desribed in the analysis plan.
 
     <item><with|font-shape|italic|Interpret results>. Apply the decision rule
     decribed in the anylysis plan. If the value of the test statistic is
-    unlikely, based on the null hypothesis,reject the null hypothesis.
+    unlikely, based on the null hypothesis, reject the null hypothesis.
   </itemize-minus>
+
+  \;
 
   A <with|font-shape|italic|statistical hypothesis> is an assumption about a
   population parameter. This assumption may or may not be true. A research
@@ -41,61 +46,125 @@
   Otherwise, it is called a <with|font-shape|italic|composite hypothesis.>
 
   The first, the hypothesis being testing, is called the
-  <with|font-shape|italic|null hypothesis>, denoted by <math|H<rsub|0>>. The
-  second is called the <with|font-shape|italic|alternative hypothesis>,
-  denoted by <math|H<rsub|1>> or <math|H<rsub|a>>.
+  <with|font-shape|italic|null hypothesis>(\<#539F\>\<#5047\>\<#8BBE\>),
+  denoted by <math|H<rsub|0>>. The second is called the
+  <with|font-shape|italic|alternative hypothesis>(\<#5907\>\<#62E9\>\<#5047\>\<#8BBE\>),
+  denoted by <math|H<rsub|1>> or <math|H<rsub|a>>. Two hypotheses
+  <math|H<rsub|0>> and <math|H<rsub|1>> divide the parameter space
+  <math|\<Theta\>> into two subsets, concluding rejection region and
+  acceptance region. One of thinking is that if the null hypothesis is false,
+  then the alternative hypothesis is true, and vice versa.( But here are
+  other thinking is \<#4E0D\>\<#63A5\>\<#53D7\>\<#4E0D\>\<#540C\>\<#4E8E\>\<#62D2\>\<#7EDD\>).
 
-  We\ 
+  <section|Type I error and Type II error, Power function>
 
-  <section|Type I error and Type II error>
+  We then define rejection region and acceptance region. Let
+  <math|<with|math-font|Bbb*|\<bbb-S\>>> be the set of all possible values of
+  <math|\<b-up-x\>=<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>|)><rsup|T>>. A
+  test partitions <math|<with|math-font|Bbb*|\<bbb-S\>>> into two subsets:
+  <math|<with|math-font|Bbb*|\<bbb-C\>>> and its complement
+  <math|<with|math-font|Bbb*|\<bbb-C\><rprime|'>>>.(other thinking:
+  \<#4E0D\>\<#76F8\>\<#4EA4\>\<#5373\>\<#53EF\>\<#FF0C\>\<#65E0\>\<#9700\>\<#5F20\>\<#6EE1\>\<#5B8C\>\<#5168\>\<#7A7A\>\<#95F4\>).
 
-  <big-table|<tabular|<tformat|<table|<row|<cell|Being adjudged to
-  be>|<cell|The man is crimeless>|<cell|The man is
-  crime>>|<row|<cell|Guilty(yes)>|<cell|Type I
-  Error(\<#5F03\>\<#771F\>)>|<cell|>>|<row|<cell|Guiltess(no)>|<cell|>|<cell|Type
-  II Error(\<#53D6\>\<#4F2A\>)>>>>>|>
+  <\itemize-minus>
+    <item>We reject <math|H<rsub|0>> or accept <math|H<rsub|1>> if
+    <math|<with|font-series|bold|x>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><rsup|T>\<in\><with|math-font|Bbb*|\<bbb-C\>>>.
+
+    <item>We accept <math|H<rsub|0>> or reject <math|H<rsub|1>> if
+    <math|<with|font-series|bold|x>=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><rsup|T>\<in\><with|math-font|Bbb*|\<bbb-C\>><rprime|'>>.
+  </itemize-minus>
+
+  <big-table|<tabular|<tformat|<cwith|1|-1|1|-1|cell-tborder|1ln>|<cwith|1|-1|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|-1|cell-lborder|1ln>|<cwith|1|-1|1|-1|cell-rborder|1ln>|<table|<row|<cell|Being
+  adjudged to be>|<cell|The man is crimeless>|<cell|The man is
+  crime>>|<row|<cell|Guilty(yes, \<#6709\>\<#7F6A\>\<#5047\>\<#8BBE\>)>|<cell|Type
+  I Error(\<#5F03\>\<#771F\>)>|<cell|>>|<row|<cell|Guiltess(no,
+  \<#65E0\>\<#7F6A\>\<#5047\>\<#8BBE\>)>|<cell|>|<cell|Type II
+  Error(\<#53D6\>\<#4F2A\>)>>>>>|\<#6CD5\>\<#5B98\>\<#5224\>\<#51B3\>>
+
+  Any decision/action wil have two outcomes: correct decision or wroing
+  decision. We should enhance the probability of making correct decision and
+  reduce the probility of making a wrong decision. Here we define type I
+  error and type II error.
 
   Rejeciton of the null hypothesis <math|H<rsub|0>> when it is ture is called
   <with|font-shape|italic|Type I error>. The probalibity of making a Type I
   error is denoted by
 
   <\equation*>
-    <tabular|<tformat|<table|<row|<cell|\<alpha\><around*|(|\<theta\>|)>=Pr<around*|(|TypeI
-    error|)>>|<cell|=Pr<around*|(|rejecting H<rsub|0><around*|\||H<rsub|o> is
-    true|\|>|)>>>|<row|<cell|>|<cell|=Pr<around*|(|<with|font-series|bold|x>\<in\>C<around*|\||\<theta\>\<in\>\<Theta\><rsub|0>|\|>|)>>>>>>
+    <tabular|<tformat|<table|<row|<cell|\<alpha\><around*|(|\<theta\>|)>=Pr<around*|(|Type
+    I error|)>>|<cell|=Pr<around*|(|rejecting H<rsub|0><around*|\||H<rsub|o>
+    is true|\<nobracket\>>|)>>>|<row|<cell|>|<cell|=Pr<around*|(|<with|font-series|bold|x>\<in\>C<around*|\||\<theta\>\<in\>\<Theta\><rsub|0>|\<nobracket\>>|)>>>>>>
   </equation*>
 
   which is a function of <math|\<theta\>> defined in
   <math|\<Theta\><rsub|0>>. <math|\<alpha\><around*|(|\<theta\>|)>> is called
-  the <with|font-shape|italic|Type I error function>.
+  the <with|font-shape|italic|Type I error function>. When
+  <math|\<Theta\><rsub|0>=<around*|{|\<theta\><rsub|0>|}>,\<alpha\><around*|(|\<theta\>|)>=\<alpha\><around*|(|\<theta\><rsub|0>|)><wide|=|^>\<alpha\>>
+  is called the <with|font-shape|italic|Type I error rate>.
+
+  Similaritily, the probability of making a Type II error is denoted by
+
+  <\equation*>
+    <tabular|<tformat|<table|<row|<cell|\<beta\><around*|(|\<theta\>|)>>|<cell|=>|<cell|Pr<around*|(|Type
+    \<bbb-I\> error|)>>|<cell|=>|<cell|Pr<around*|(|accepting
+    H<rsub|0><around*|\||H<rsub|0> is false|\<nobracket\>>|)>>>|<row|<cell|>|<cell|>|<cell|>|<cell|=>|<cell|Pr<around*|(|\<b-up-x\>\<in\><with|math-font|Bbb*|\<bbb-C\>><rprime|'><around*|\||\<theta\>\<in\>\<Theta\><rsub|1>|\<nobracket\>>|)>>>>>>
+  </equation*>
 
   Typically, the Type I error is more serious thant the Tyoep] II error. But
-  we can adjust to <math|H<rsub|0>> and <math|H<rsub|1>>.
+  we can adjust to <math|H<rsub|0>> and <math|H<rsub|1>>.\ 
+
+  <big-table|<tabular|<tformat|<cwith|1|-1|1|-1|cell-tborder|1ln>|<cwith|1|-1|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|-1|cell-lborder|1ln>|<cwith|1|-1|1|-1|cell-rborder|1ln>|<twith|table-halign|c>|<table|<row|<cell|>|<cell|<math|H<rsub|0>>
+  is true(<math|\<theta\>\<in\>\<Theta\><rsub|0>>)>|<cell|<math|H<rsub|0>> is
+  false(<math|\<theta\>\<in\>\<Theta\><rsub|1>>)>>|<row|<cell|Reject
+  <math|H<rsub|0>>(<math|<with|font-series|bold|x>\<in\><with|math-font|Bbb*|\<bbb-C\>>>)>|<cell|<math|\<alpha\><around*|(|\<theta\>|)>>(\<#5F03\>\<#771F\>)>|<cell|Correct>>|<row|<cell|Accept
+  <math|H<rsub|0>>(<math|<with|font-series|bold|x>\<in\><with|math-font|Bbb*|\<bbb-C\>><rprime|'>>)>|<cell|Correct>|<cell|<math|\<beta\><around*|(|\<theta\>|)>>(\<#53D6\>\<#4F2A\>)>>>>>|Use
+  type I and I error function to measure error>
 
   \;
 
-  The values of the power function are the probilities of rejecting the null
-  hypothesis <math|H<rsub|0>> fro variance values of the parameter
-  <math|\<theta\>>. The power function plays the same role in hypothesis
-  testing as that (MSE) played in estimation. The power function is goldgen
-  standard in assessing the goodness of a test <math|T> or in comparing two
-  competing tests <math|T<rsub|1>> and <math|T<rsub|2>>.
+  Let <math|<with|math-font|Bbb*|\<bbb-C\>>> be the critical region of a test
+  for testing <math|H<rsub|0>> against <math|H<rsub|1>>, then the function
 
   <\equation*>
-    <tabular|<tformat|<table|<row|<cell|p<around*|(|\<theta\>|)>>|<cell|=Pr>|<cell|\<theta\>\<in\>\<Theta\><rsub|0>>>|<row|<cell|>|<cell|=>|<cell|\<theta\>\<in\>\<Theta\><rsub|1>>>|<row|<cell|>|<cell|>|<cell|\<theta\>\<nin\>\<Theta\><rsub|0>\<cup\>\<Theta\><rsub|1>>>>>>
+    p<around*|(|\<theta\>|)>=Pr<around*|(|reject
+    H<rsub|0><around*|\||\<theta\>|\<nobracket\>>|)>=Pr<around*|(|\<b-up-x\>\<in\><with|math-font|Bbb*|\<bbb-C\>><around*|\||\<theta\>|\<nobracket\>>|)>
   </equation*>
 
-  Fix the probalility of Type I error at preassigned (small) level
-  <math|a<rsup|\<ast\>><around*|(||)>>, then minimize the probability of Type
-  II error. That is , consider the test with
+  is the <with|font-shape|italic|power function of the test>. The values of
+  the power function are the probilities of rejecting the null hypothesis
+  <math|H<rsub|0>> for variance values of the parameter <math|\<theta\>>. The
+  power function plays the same role in hypothesis testing as that (MSE)
+  played in estimation. The power function is golden standard in assessing
+  the goodness of a test <math|T> or in comparing two competing tests
+  <math|T<rsub|1>> and <math|T<rsub|2>>(???). The power function can be
+  simplied as
+
+  <\equation*>
+    <tabular|<tformat|<table|<row|<cell|p<around*|(|\<theta\>|)>=>|<cell|<around*|{|<tabular|<tformat|<table|<row|<cell|\<alpha\><around*|(|\<theta\>|)>>|<cell|,\<theta\>\<in\>\<Theta\><rsub|0>>>|<row|<cell|1-\<beta\><around*|(|\<theta\>|)>>|<cell|,\<theta\>\<in\>\<Theta\><rsub|1>>>|<row|<cell|Pr<around*|(|\<b-up-x\>\<in\><with|math-font|Bbb*|\<bbb-C\>><around*|\||\<theta\>|\<nobracket\>>|)>>|<cell|,\<theta\>\<nin\>\<Theta\><rsub|0>\<cup\>\<Theta\><rsub|1>>>>>>|\<nobracket\>>>>>>>
+  </equation*>
+
+  Here we try to coose a good test. In practice, we fix the probalility of
+  Type I error at preassigned (small) level
+  <math|a<rsup|\<ast\>><around*|(|0\<less\>a<rsup|*\<ast\>>\<less\>1|)>>,
+  then minimize the probability of Type II error. That is , consider the test
+  with
 
   <\equation*>
     sup<rsub|\<theta\>\<in\>\<Theta\><rsub|0>>p<around*|(|\<theta\>|)>=sup<rsub|\<theta\>\<in\>\<Theta\><rsub|0>>\<alpha\><around*|(|\<theta\>|)>\<leqslant\>\<alpha\><rsup|\<ast\>>
   </equation*>
 
   and choose the one with the probability of Type II error
-  <math|\<beta\><around*|(|\<theta\>|)>> being minimized. So if
-  <math|\<alpha\><rsub|T<rsub|1>><around*|(|\<theta\>|)>>
+  <math|\<beta\><around*|(|\<theta\>|)>> being minimized. For the comparison
+  of two tests <math|T<rsub|1>> and <math|T<rsub|2>>:\ 
+
+  <\itemize-minus>
+    <item>if <math|\<alpha\><rsub|T<rsub|1>><around*|(|\<theta\>|)>>,
+    <math|\<alpha\><rsub|T<rsub|2>><around*|(|\<theta\>|)>\<leqslant\>\<alpha\><rsup|\<ast\>>>
+    and <math|\<beta\><rsub|T<rsub|1>><around*|(|\<theta\>|)>\<leqslant\>\<beta\><rsub|T<rsub|2>><around*|(|\<theta\>|)>>,
+    then <math|T<rsub|1>> is better than <math|T<rsub|2>>.
+  </itemize-minus>
+
+  \;
 
   <section|The Neyman-Pearson Lemma>
 
@@ -370,6 +439,7 @@
 
 <\initial>
   <\collection>
+    <associate|font-base-size|11>
     <associate|page-medium|paper>
   </collection>
 </initial>
@@ -377,15 +447,15 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1|?>>
+    <associate|auto-10|<tuple|5|?>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-3|<tuple|2|2>>
-    <associate|auto-4|<tuple|3|3>>
-    <associate|auto-5|<tuple|4|4>>
-    <associate|auto-6|<tuple|4.1|?>>
-    <associate|auto-7|<tuple|4.2|?>>
-    <associate|auto-8|<tuple|4.3|?>>
-    <associate|auto-9|<tuple|5|?>>
+    <associate|auto-4|<tuple|2|3>>
+    <associate|auto-5|<tuple|3|4>>
+    <associate|auto-6|<tuple|4|5>>
+    <associate|auto-7|<tuple|4.1|5>>
+    <associate|auto-8|<tuple|4.2|5>>
+    <associate|auto-9|<tuple|4.3|5>>
   </collection>
 </references>
 
@@ -410,6 +480,23 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Test
       on Normal Means> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|4.1<space|2spc>p-Value
+      \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6>>
+
+      <with|par-left|<quote|1tab>|4.2<space|2spc>One-sample t test
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7>>
+
+      <with|par-left|<quote|1tab>|4.3<space|2spc>Two-sample t test
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Goodness
+      of Fit Test(\<#62DF\>\<#5408\>\<#4F18\>\<#5EA6\>\<#68C0\>\<#9A8C\>)>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
