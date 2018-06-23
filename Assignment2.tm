@@ -270,29 +270,133 @@
     <item>Find the density of <math|X<rsub|1>+\<cdots\>+X<rsub|n>.>
   </enumerate-alpha>
 
-  \;
+  <with|font-series|bold|Solution:>\ 
+
+  <\with|color|blue>
+    Let <math|Y<rsub|n>=X<rsub|1>+\<cdots\>+X<rsub|n>.> Making transormation
+
+    <\equation*>
+      <around*|{|<tabular|<tformat|<table|<row|<cell|y<rsub|1>>|<cell|=>|<cell|x<rsub|1>/y<rsub|n>,>>|<row|<cell|>|<cell|\<vdots\>>|<cell|>>|<row|<cell|y<rsub|n-1>>|<cell|=>|<cell|x<rsub|n-1>/y<rsub|n,>>>|<row|<cell|y<rsub|n>>|<cell|=>|<cell|x<rsub|1>+\<ldots\>+x<rsub|n>.>>>>>|\<nobracket\>>
+    </equation*>
+
+    we have <math|y<rsub|i>\<geqslant\>0> for <math|i=1,\<ldots\>,n-1>,
+    <math|y<rsub|1>+\<cdots\>+y<rsub|n-1>\<leqslant\>1>,
+    <math|y<rsub|n>\<geqslant\>0>,
+
+    and the inverse transformation is given by
+
+    <\equation*>
+      <around*|{|<tabular|<tformat|<table|<row|<cell|x<rsub|1>>|<cell|=>|<cell|y<rsub|1>y<rsub|n>>>|<row|<cell|>|<cell|\<vdots\>>|<cell|>>|<row|<cell|x<rsub|n-1>>|<cell|=>|<cell|y<rsub|n-1>y<rsub|n>>>|<row|<cell|x<rsub|n>>|<cell|=>|<cell|<around*|(|1-y<rsub|1>-\<cdots\>-y<rsub|n-1>|)>y<rsub|n>.>>>>>|\<nobracket\>>
+    </equation*>
+
+    Since the Jacobian is\ 
+
+    <\equation*>
+      J=<around*|\||<frac|\<partial\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|\<partial\><around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>>|\|>=<around*|\||<tabular*|<tformat|<table|<row|<cell|y<rsub|n>>|<cell|0>|<cell|\<cdots\>>|<cell|0>|<cell|y<rsub|1>>>|<row|<cell|0>|<cell|y<rsub|n>>|<cell|\<cdots\>>|<cell|0>|<cell|y<rsub|<rsub|2>>>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|y<rsub|n>>|<cell|y<rsub|n-1>>>|<row|<cell|-y<rsub|n>>|<cell|-y<rsub|n>>|<cell|\<ldots\>>|<cell|-y<rsub|n>>|<cell|1-<big|sum><rsub|i=1><rsup|n-1>y<rsub|i>>>>>>|\|>=y<rsub|n><rsup|n-1>,
+    </equation*>
+
+    the joint density of <math|Y<rsub|1>,\<ldots\>,Y<rsub|n-1>,Y<rsub|n>> is
+
+    <\equation*>
+      <tabular|<tformat|<table|<row|<cell|>|<cell|g*<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n-1>,y<rsub|n>|)>>>|<row|<cell|=>|<cell|f<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)><around*|\||J|\|>>>|<row|<cell|=>|<cell|<around*|[|<big|prod><rsub|i=1><rsup|n><frac|1|\<Gamma\><around*|(|a<rsub|i>|)>>x<rsub|i><rsup|a<rsub|i>-1>e<rsup|-x<rsub|i>>|]>\<cdot\>y<rsub|n><rsup|n-1>>>|<row|<cell|=>|<cell|<around*|[|<frac|\<Gamma\><around*|(|a<rsub|+>|)>|\<Gamma\><around*|(|a<rsub|1>|)>\<ldots\>\<Gamma\><around*|(|a<rsub|n>|)>>y<rsub|1><rsup|a<rsub|1>-1>\<cdots\>y<rsub|n-1><rsup|a<rsub|n-1>-1><around*|(|1-<big|sum><rsub|j=1><rsup|n-1>y<rsub|j>|)><rsup|a<rsub|n>-1>|]>\<times\><frac|1|\<Gamma\><around*|(|a<rsub|+>|)>>y<rsub|n><rsup|a<rsub|+>-1>e<rsup|-y
+      n>,>>>>>
+    </equation*>
+
+    where <math|a<rsub|+>=<big|sum><rsub|i=1><rsup|n>a<rsub|i>>. Therefore,
+
+    <\equation*>
+      <around*|(|Y<rsub|1>,\<ldots\>,Y<rsub|n-1>|)><rsup|T>\<sim\>Dirichlet<around*|(|a<rsub|1>,\<ldots\>,a<rsub|n-1>;a<rsub|n>|)>,
+    </equation*>
+
+    <math|Y<rsub|n>\<sim\>Gamma<around*|(|a<rsub|+>,1|)>>, and
+    <math|<around*|(|Y<rsub|1>,\<ldots\>,Y<rsub|n-1>|)><rsup|T>\<perp\>Y<rsub|n>>.
+  </with>
 
   <with|font-series|bold|2.5> Let <math|X\<sim\>Gamma<around*|(|p,1|)>>,
-  <math|Y\<sim\>Beta<around*|(|q,p-q|)>>, and X \<bot\>\<bot\> Y , where
-  <math|0\<less\>q\<less\>p>. Find the distribution of <math|XY>.
+  <math|Y\<sim\>Beta<around*|(|q,p-q|)>>, and X \<bot\> Y , where
+  <math|0\<less\>q\<less\>p>. Find the distribution of <math|X Y>.
 
-  \;
+  <with|font-series|bold|Solution:>
 
-  <with|font-series|bold|2.6> Let Z \<sim\> Bernoulli (1 \<minus\> \<phi\>),
-  <math|<with|font-series|bold|x>=<around*|(|X<rsub|1>,\<ldots\>,X<rsub|m>|)><rsup|T>>,
+  <\with|color|blue>
+    Let <math|U=log<around*|(|X|)>> and <math|Y=log<around*|(|Y|)>>. The mgf
+    of <math|U> is\ 
+
+    <\equation*>
+      <tabular|<tformat|<table|<row|<cell|M<rsub|U><around*|(|t|)>>|<cell|=>|<cell|E<around*|(|e<rsup|t
+      U>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|\<Gamma\><around*|(|p|)>><big|int><rsub|0><rsup|\<infty\>>e<rsup|t
+      log<around*|(|x|)>>\<cdot\>x<rsup|p-1>e<rsup|-x>d
+      x>>|<row|<cell|>|<cell|=>|<cell|<frac|\<Gamma\><around*|(|p+t|)>|\<Gamma\><around*|(|p|)>>>>>>>
+    </equation*>
+
+    and the mgf of <math|V> is\ 
+
+    <\equation*>
+      <tabular|<tformat|<table|<row|<cell|M<rsub|V><around*|(|t|)>>|<cell|=>|<cell|E<around*|(|e<rsup|t
+      V>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|B<around*|(|q,p-q|)>><big|int><rsub|0><rsup|\<infty\>>e<rsup|t
+      log<around*|(|V|)>>\<cdot\>y<rsup|q-1><around*|(|1-y|)><rsup|p-q\<longminus\>1>d
+      y>>|<row|<cell|>|<cell|=>|<cell|<frac|B<around*|(|q+t,p-q|)>|B<around*|(|q,p-q|)>>=<frac|\<Gamma\><around*|(|q+t|)>\<Gamma\><around*|(|p|)>|\<Gamma\><around*|(|q|)>\<Gamma\><around*|(|p+t|)>>.>>>>>
+    </equation*>
+
+    So the mgf of <math|log<around*|(|X Y|)>=U+V> is
+
+    <\equation*>
+      M<rsub|U+V><around*|(|t|)>=M<rsub|U><around*|(|t|)>\<cdot\>M<rsub|V><around*|(|t|)>=<frac|\<Gamma\><around*|(|q+t|)>|\<Gamma\><around*|(|q|)>>,
+    </equation*>
+
+    which implies that <math|X Y\<sim\>Gamma<around*|(|q,1|)>>.
+  </with>
+
+  <with|font-series|bold|2.6> Let <math|Z\<sim\>Bernoulli<around*|(|1-\<phi\>|)>>,
+  <math|<with|font-series|bold|\<b-up-x\>>=<around*|(|X<rsub|1>,\<ldots\>,X<rsub|m>|)><rsup|T>>,
   <math|X<rsub|i>\<sim\>Poisson<around*|(|\<lambda\><rsub|i>|)>> for
   <math|i=1,\<ldots\>,m,> and <math|<around*|(|Z,X<rsub|1>,\<ldots\>,X<rsub|m>|)>>
-  be mutually independent. Define <math|<with|font-series|bold|y>=<around*|(|Y<rsub|1>,\<ldots\>,Y<rsub|m>|)><rsup|T>=Z<with|font-series|bold|x>>.
+  be mutually independent. Define <math|<with|font-series|bold|\<b-up-y\>>=<around*|(|Y<rsub|1>,\<ldots\>,Y<rsub|m>|)><rsup|T>=Z\<b-up-x\>>.
   Find the joint pmf of <with|font-series|bold|y>.
 
-  \;
+  <with|font-series|bold|Solution:>\ 
+
+  <\with|color|blue>
+    The joint pmf of <math|\<b-up-y\>=Z\<b-up-x\>> is denoted by
+
+    <\equation*>
+      f<around*|(|<with|font-series|bold|y><around*|\||\<phi\>,<with|font-series|bold|\<lambda\>>|\<nobracket\>>|)>=Pr<around*|(|\<b-up-y\>=<with|font-series|bold|y>|)>=Pr<around*|(|Z
+      X<rsub|1>=y<rsub|1>,\<ldots\>,Z X<rsub|m>=y<rsub|m>|)>.
+    </equation*>
+
+    If <math|<with|font-series|bold|y>=<with|font-series|bold|0><rsub|m>>, we
+    have
+
+    <\equation*>
+      <tabular|<tformat|<table|<row|<cell|f<around*|(|<with|font-series|bold|y><around*|\||\<phi\>,<with|font-series|bold|\<lambda\>>|\<nobracket\>>|)>>|<cell|=>|<cell|Pr<around*|(|Z
+      X<rsub|1>=0,\<ldots\>,Z X<rsub|m>=0|)>>>|<row|<cell|>|<cell|=>|<cell|Pr<around*|(|Z=0|)>+Pr<around*|(|Z=1,X<rsub|1>=0,\<ldots\>,X<rsub|m>=0|)>>>|<row|<cell|>|<cell|=>|<cell|\<phi\>+<around*|(|1-\<phi\>|)>e<rsup|-\<lambda\><rsub|+>>,>>>>>
+    </equation*>
+
+    where <math|\<lambda\><rsub|+>=<big|sum><rsub|i=1><rsup|m>\<lambda\><rsub|i>>.
+    If <math|<with|font-series|bold|y>=<with|font-series|bold|0><rsub|m>>, we
+    have
+
+    <\equation*>
+      <tabular|<tformat|<table|<row|<cell|f<around*|(|<with|font-series|bold|y><around*|\||\<phi\>,<with|font-series|bold|\<lambda\>>|\<nobracket\>>|)>>|<cell|=>|<cell|Pr<around*|(|Z
+      X<rsub|1>=y<rsub|1>,\<ldots\>,Z X<rsub|m>=y<rsub|m>|)>>>|<row|<cell|>|<cell|=>|<cell|Pr<around*|(|Z=1,X<rsub|1>=y<rsub|1>,\<ldots\>,X<rsub|m>=y<rsub|m>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|1-\<phi\>|)>e<rsup|-\<lambda\><rsub|+>><big|prod><rsub|i=1><rsup|m><frac|\<lambda\><rsup|y<rsub|i>><rsub|i>|y<rsub|i>!>>>>>>
+    </equation*>
+
+    Finally, we obtain
+
+    <\equation*>
+      <tabular|<tformat|<table|<row|<cell|>|<cell|f<around*|(|<with|font-series|bold|y><around*|\||\<phi\>,<with|font-series|bold|\<lambda\>>|\<nobracket\>>|)>=Pr<around*|(|\<b-up-y\>=<with|font-series|bold|y>|)>>>|<row|<cell|=>|<cell|<around*|[|\<phi\>+<around*|(|1-\<phi\>|)>e<rsup|-\<lambda\><rsub|+>>|]>I<around*|(|<with|font-series|bold|y>=<with|font-series|bold|0>|)>+<around*|[|<around*|(|1-\<phi\>|)>e<rsup|-\<lambda\><rsub|+>><big|prod><rsub|i=1><rsup|m><frac|\<lambda\><rsub|i><rsup|y<rsub|i>>|y<rsub|i>!>|]>I<around*|(|<with|font-series|bold|y>\<neq\>0|)>>>|<row|<cell|=>|<cell|\<phi\>Pr<around*|(|<with|font-series|bold|\<xi\>>=<with|font-series|bold|y>|)>+<around*|(|1-\<phi\>|)>Pr<around*|(|\<b-up-x\>=<with|font-series|bold|y>|)>,>>>>>
+    </equation*>
+
+    where <math|<with|font-series|bold|\<xi\>>=<around*|(|\<xi\><rsub|1>,\<ldots\>,\<xi\><rsub|m>|)><rsup|T>>
+    and <math|<around*|{|\<xi\><rsub|i>|}><rsub|i=1><rsup|m><above|\<sim\>|iid>Degenerate<around*|(|0|)>>.
+  </with>
 
   <with|font-series|bold|2.7> Let <math|x<rsub|1>,x<rsub|2>> be a random
   sample form the <math|N<around*|(|o,\<sigma\><rsup|2>|)>> population.
 
   (a) Derive the distribution of the statistic
 
-  <math|<frac|<around*|(|X<rsub|1>-X<rsub|2>|)><rsup|2>|*<around*|(|X<rsub|1>+<with|font-series|bold|X><rsub|2>|)><rsup|2>>>
+  <math|<frac|<around*|(|X<rsub|1>-X<rsub|2>|)><rsup|2>|*<around*|(|X<rsub|1>+X<rsub|2>|)><rsup|2>>>
 
   (b) Find the constant <math|k>, such that\ 
 
@@ -302,6 +406,44 @@
 
   <with|font-series|bold|Solve:>
 
+  <\with|color|blue>
+    (a) It is easy to know that
+
+    <\equation*>
+      X<rsub|1>+X<rsub|2>\<sim\>N<around*|(|0,2\<sigma\><rsup|2>|)><space|1em>and<space|1em>X<rsub|1>-X<rsub|2>\<sim\>N<around*|(|0,2\<sigma\><rsup|2>|)>.
+    </equation*>
+
+    Since
+
+    <\equation*>
+      <tabular|<tformat|<table|<row|<cell|Cov<around*|(|X<rsub|1>+X<rsub|2>,X<rsub|1>-X<rsub|2>|)>>|<cell|=>|<cell|E<around*|[|<around*|(|X<rsub|1>+X<rsub|2>|)><around*|(|X<rsub|1>-X<rsub|2>|)>|]>>>|<row|<cell|>|<cell|=>|<cell|E<around*|(|X<rsub|1><rsup|2>|)>-E<around*|(|X<rsub|2><rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|2\<sigma\><rsup|2>-2\<sigma\><rsup|2>=0>>>>>
+    </equation*>
+
+    <math|\<Longrightarrow\>> <math|<around*|(|X<rsub|1>+X<rsub|2>|)>\<bot\><around*|(|X<rsub|1>-X<rsub|2>|)>>.
+    Let
+
+    <\equation*>
+      Z<rsub|1><wide|=|^><frac|X<rsub|1>+X<rsub|2>|<sqrt|2>\<sigma\>><space|1em>and<space|1em>Z<rsub|2><wide|=|^><frac|X<rsub|1>-X<rsub|2>|<sqrt|2>\<sigma\>>,
+    </equation*>
+
+    then <math|Z<rsub|1>\<sim\>N<around*|(|0,1|)>>,
+    <math|Z<rsub|2>\<sim\>N<around*|(|0,1|)>> and
+    <math|Z<rsub|1>\<perp\>Z<rsub|2>>. Therefore,
+
+    <\equation*>
+      <frac|<around*|(|X<rsub|1>-X<rsub|2>|)><rsup|2>|<around*|(|X<rsub|1>+X<rsub|2>|)><rsup|2>>=<frac|Z<rsub|2><rsup|2>|Z<rsub|1><rsup|2>>\<sim\><frac|\<chi\><rsup|2><around*|(|1|)>/1|\<chi\><rsup|2><around*|(|1|)>/1>=F<around*|(|1,1|)>.
+    </equation*>
+
+    (b) Since
+
+    <\equation*>
+      <tabular|<tformat|<table|<row|<cell|>|<cell|Pr<around*|{|<frac|<around*|(|X<rsub|1>+X<rsub|2>|)><rsup|2>|<around*|(|X<rsub|1>+X<rsub|2>|)><rsup|2>+<around*|(|X<rsub|1>-X<rsub|2>|)><rsup|2>>\<gtr\>k|}>>>|<row|<cell|=>|<cell|Pr<around*|{|<frac|Z<rsub|1><rsup|2>|Z<rsub|1><rsup|2>+Z<rsub|2><rsup|2>>\<gtr\>k|}>>>|<row|<cell|=>|<cell|Pr<around*|{|<frac|Z<rsub|2><rsup|2>|Z<rsub|1><rsup|2>>\<less\><frac|1-k|k>|}>=0.1,>>>>>
+    </equation*>
+
+    we obtain <math|<around*|(|1-k|)>/k=0.02508563> so that
+    <math|k=0.9755283>.
+  </with>
+
   <with|font-series|bold|2.8> Show that if <math|X> and <math|Y> are
   independent exponential random variables with <math|\<lambda\>=1>, then
   <math|X/Y> follows an F distribution. Also, identify the degrees of
@@ -310,21 +452,42 @@
   <\proof>
     \;
 
-    <\math>
-      f<around*|(|x|)>=e<rsup|-x>,f<around*|(|y|)>=e<rsup|-y>,f<around*|(|x,y|)>=e<rsup|-<around*|(|x+y|)>>
-    </math>
+    <\with|color|dark green>
+      <\with|color|green>
+        <\with|color|dark cyan>
+          <\math>
+            f<around*|(|x|)>=e<rsup|-x>,f<around*|(|y|)>=e<rsup|-y>,f<around*|(|x,y|)>=e<rsup|-<around*|(|x+y|)>>
+          </math>
 
-    Let <math|U=X> and <math|V=X/Y> <math|\<Rightarrow\>X=U and Y=U/V>
+          Let <math|U=X> and <math|V=X/Y> <math|\<Rightarrow\>X=U and Y=U/V>
 
-    <math|<around*|\||J|\|>=<around*|\||<tabular|<tformat|<table|<row|<cell|1>|<cell|U>>|<row|<cell|<frac|1|V>>|<cell|-<frac|U|V>>>>>>|\|>=<frac|-U|V>>
+          <math|<around*|\||J|\|>=<around*|\||<tabular|<tformat|<table|<row|<cell|1>|<cell|U>>|<row|<cell|<frac|1|V>>|<cell|-<frac|U|V>>>>>>|\|>=<frac|-U|V>>
 
-    Then\ 
+          Then\ 
 
-    <\equation*>
-      <tabular|<tformat|<table|<row|<cell|f<rsub|uv><around*|(|u,v|)>>|<cell|=>|<cell|f<rsub|XY><around*|(|u,<frac|u|v>|)><around*|\||<frac|-U|V>|\|>=e<rsup|-u<around*|(|1+<frac|1|v>|)>><around*|(|<frac|u|v<rsup|2>>|)>>>|<row|<cell|f<rsub|v><around*|(|v|)>>|<cell|=>|<cell|<big|int><rsub|0><rsup|\<infty\>>e<rsup|-u<around*|(|1+<frac|1|v>|)>><around*|(|<frac|u|v<rsup|2>>|)>d
-      u=<frac|1|v<rsup|2>><big|int><rsub|1><rsup|\<infty\>>e<rsup|-u<around*|(|1+<frac|1|v>|)>>u<frac|<around*|(|1+<frac|1|v>|)><rsup|2>|\<Gamma\><around*|(|2|)>>
-      d u <frac|\<Gamma\><around*|(|2|)>|<around*|(|1+<frac|1|v>|)><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<frac|1|v>|)><rsup|2><around*|(|1+<frac|1|v>|)><rsup|-2>=<around*|(|1+v|)><rsup|-2>\<sim\>F<around*|(|2,2|)>>>>>>
-    </equation*>
+          <\equation*>
+            <tabular|<tformat|<table|<row|<cell|f<rsub|U
+            V><around*|(|u,v|)>>|<cell|=>|<cell|f<rsub|XY><around*|(|u,<frac|u|v>|)><around*|\||<frac|-U|V>|\|>=e<rsup|-u<around*|(|1+<frac|1|v>|)>><around*|(|<frac|u|v<rsup|2>>|)>>>|<row|<cell|f<rsub|v><around*|(|v|)>>|<cell|=>|<cell|<big|int><rsub|0><rsup|\<infty\>>e<rsup|-u<around*|(|1+<frac|1|v>|)>><around*|(|<frac|u|v<rsup|2>>|)>d
+            u=<frac|1|v<rsup|2>><big|int><rsub|1><rsup|\<infty\>>e<rsup|-u<around*|(|1+<frac|1|v>|)>>u<frac|<around*|(|1+<frac|1|v>|)><rsup|2>|\<Gamma\><around*|(|2|)>>
+            d u <frac|\<Gamma\><around*|(|2|)>|<around*|(|1+<frac|1|v>|)><rsup|2>>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|<frac|1|v>|)><rsup|2><around*|(|1+<frac|1|v>|)><rsup|-2>=<around*|(|1+v|)><rsup|-2>\<sim\>F<around*|(|2,2|)>>>>>>
+          </equation*>
+        </with>
+      </with>
+    </with>
+
+    <\with|color|blue>
+      Noth that
+
+      <\equation*>
+        Exponetial<around*|(|1|)>=Gamma<around*|(|1,1|)>=<frac|1|2>Gamma<around*|(|<frac|2|2>,<frac|1|2>|)>=<frac|1|2>\<chi\><rsup|2><around*|(|2|)>.
+      </equation*>
+
+      then, we obtain
+
+      <\equation*>
+        <frac|X|Y>\<sim\><frac|\<chi\><rsup|2><around*|(|2|)>/2|\<chi\><rsup|2><around*|(|2|)>/2>=F<around*|(|2,2|)>
+      </equation*>
+    </with>
 
     \;
   </proof>
