@@ -8,7 +8,7 @@
     11510511
   </author-affiliation>>>>
 
-  <section|Part I>
+  <subsection*|Part I>
 
   <with|font-series|bold|2.1> Calculate the expectation and variance of the
   <math|T\<sim\>t<around*|(|n|)>> via the stochastic representation (SR):
@@ -23,57 +23,115 @@
   <\solution>
     \;
 
-    The density of <math|T> is given by
+    <\with|color|magenta>
+      The density of <math|T> is given by
 
-    <\equation*>
-      f<around*|(|t|)>=<frac|\<Gamma\><around*|(|<frac|n+1|2>|)>|<sqrt|\<pi\>n>\<Gamma\><around*|(|<frac|n|2>|)>><around*|(|1+<frac|t<rsup|2>|n>|)><rsup|-<frac|n+1|2>>,-\<infty\>\<less\>t\<less\>\<infty\>.
-    </equation*>
+      <\equation*>
+        f<around*|(|t|)>=<frac|\<Gamma\><around*|(|<frac|n+1|2>|)>|<sqrt|\<pi\>n>\<Gamma\><around*|(|<frac|n|2>|)>><around*|(|1+<frac|t<rsup|2>|n>|)><rsup|-<frac|n+1|2>>,-\<infty\>\<less\>t\<less\>\<infty\>.
+      </equation*>
 
-    The expectation is\ 
+      The expectation is\ 
 
-    <\equation*>
-      <tabular|<tformat|<table|<row|<cell|E<around*|(|T|)>>|<cell|=>|<cell|<big|int><rsub|-\<infty\>><rsup|\<infty\>>t
-      f<around*|(|t|)>dt>>|<row|<cell|>|<cell|=>|<cell|<frac|\<Gamma\><around*|(|<frac|n+1|2>|)>|<sqrt|\<pi\>n>\<Gamma\><around*|(|<frac|n|2>|)>><big|int><rsub|-\<infty\>><rsup|\<infty\>>t<around*|(|1+<frac|t<rsup|2>|n>|)><rsup|-<frac|n+1|2>>d
-      t>>|<row|<cell|>|<cell|=>|<cell|<frac|\<Gamma\><around*|(|<frac|n+1|2>|)>|2<sqrt|\<pi\>n>\<Gamma\><around*|(|<frac|n|2>|)>><big|int><rsub|-\<infty\>><rsup|\<infty\>><around*|(|1+<frac|t<rsup|2>|n>|)><rsup|-<frac|n+1|2>>d
-      t<rsup|2>>>|<row|<cell|>|<cell|=>|<cell|0>>>>>
-    </equation*>
+      <\equation*>
+        <tabular|<tformat|<table|<row|<cell|E<around*|(|T|)>>|<cell|=>|<cell|<big|int><rsub|-\<infty\>><rsup|\<infty\>>t
+        f<around*|(|t|)>dt>>|<row|<cell|>|<cell|=>|<cell|<frac|\<Gamma\><around*|(|<frac|n+1|2>|)>|<sqrt|\<pi\>n>\<Gamma\><around*|(|<frac|n|2>|)>><big|int><rsub|-\<infty\>><rsup|\<infty\>>t<around*|(|1+<frac|t<rsup|2>|n>|)><rsup|-<frac|n+1|2>>d
+        t>>|<row|<cell|>|<cell|=>|<cell|<frac|\<Gamma\><around*|(|<frac|n+1|2>|)>|2<sqrt|\<pi\>n>\<Gamma\><around*|(|<frac|n|2>|)>><big|int><rsub|-\<infty\>><rsup|\<infty\>><around*|(|1+<frac|t<rsup|2>|n>|)><rsup|-<frac|n+1|2>>d
+        t<rsup|2>>>|<row|<cell|>|<cell|=>|<cell|0>>>>>
+      </equation*>
 
-    The variance is
+      The variance is
 
-    <\equation*>
-      <tabular|<tformat|<table|<row|<cell|E<around*|(|T<rsup|2>|)>>|<cell|=>|<cell|<big|int><rsub|-\<infty\>><rsup|\<infty\>>t<rsup|2>
-      f<around*|(|t|)>dt>>|<row|<cell|>|<cell|=>|<cell|<frac|\<Gamma\><around*|(|<frac|n+1|2>|)>|<sqrt|\<pi\>n>\<Gamma\><around*|(|<frac|n|2>|)>><big|int><rsub|-\<infty\>><rsup|\<infty\>>t<rsup|2><around*|(|1+<frac|t<rsup|2>|n>|)><rsup|-<frac|n+1|2>>d
-      t>>|<row|<cell|>|<cell|=>|<cell|<frac|\<Gamma\><around*|(|<frac|n+1|2>|)>|2<sqrt|\<pi\>n>\<Gamma\><around*|(|<frac|n|2>|)>><big|int><rsub|-\<infty\>><rsup|\<infty\>>t<around*|(|1+<frac|t<rsup|2>|n>|)><rsup|-<frac|n+1|2>>d
-      t<rsup|2>>>>>>
-    </equation*>
+      <\equation*>
+        <tabular|<tformat|<table|<row|<cell|E<around*|(|T<rsup|2>|)>>|<cell|=>|<cell|<big|int><rsub|-\<infty\>><rsup|\<infty\>>t<rsup|2>
+        f<around*|(|t|)>dt>>|<row|<cell|>|<cell|=>|<cell|<frac|\<Gamma\><around*|(|<frac|n+1|2>|)>|<sqrt|\<pi\>n>\<Gamma\><around*|(|<frac|n|2>|)>><big|int><rsub|-\<infty\>><rsup|\<infty\>>t<rsup|2><around*|(|1+<frac|t<rsup|2>|n>|)><rsup|-<frac|n+1|2>>d
+        t>>|<row|<cell|>|<cell|=>|<cell|<frac|\<Gamma\><around*|(|<frac|n+1|2>|)>|2<sqrt|\<pi\>n>\<Gamma\><around*|(|<frac|n|2>|)>><big|int><rsub|-\<infty\>><rsup|\<infty\>>t<around*|(|1+<frac|t<rsup|2>|n>|)><rsup|-<frac|n+1|2>>d
+        t<rsup|2>>>>>>
+      </equation*>
 
-    <\equation*>
-      <tabular|<tformat|<table|<row|<cell|Var<around*|(|T|)>>|<cell|=>|<cell|E<around*|(|T<rsup|2>|)>-E<around*|(|T|)><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|<frac|n-1|n-3><around*|(|for
-      n\<gtr\>3,|)>>>>>>
-    </equation*>
+      <\equation*>
+        <tabular|<tformat|<table|<row|<cell|Var<around*|(|T|)>>|<cell|=>|<cell|E<around*|(|T<rsup|2>|)>-E<around*|(|T|)><rsup|2>>>|<row|<cell|>|<cell|=>|<cell|<frac|n-1|n-3><around*|(|for
+        n\<gtr\>3,|)>>>>>>
+      </equation*>
+    </with>
   </solution>
+
+  <\with|color|blue>
+    <\equation*>
+      E<around*|(|T|)>=E<around*|(|Z|)>\<times\><sqrt|n>\<times\>E<around*|(|Y<rsup|-1/2>|)>=0
+    </equation*>
+
+    Since <math|Z\<sim\>N<around*|(|0,1|)>> and <math|Z\<perp\>Y>.
+
+    THe density of <math|Y\<sim\>\<chi\><rsup|2><around*|(|n|)>> is\ 
+
+    <\equation*>
+      g<around*|(|y|)>=<frac|2<rsup|-n/2>|\<Gamma\><around*|(|n/2|)>>y<rsup|n/2-1>e<rsup|-y/2>,y\<gtr\>0.
+    </equation*>
+
+    Hence, we have
+
+    <\equation*>
+      <tabular|<tformat|<table|<row|<cell|Var<around*|(|T|)>>|<cell|=>|<cell|E<around*|(|T<rsup|2>|)>-<around*|[|E<around*|(|T|)>|]><rsup|2>=E<around*|(|T<rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|E<around*|(|X<rsup|2>|)>\<times\>n
+      E<around*|(|Y<rsup|-1>|)>>>|<row|<cell|>|<cell|=>|<cell|1\<times\>n<big|int><rsub|0><rsup|\<infty\>>y<rsup|-1>g<around*|(|y|)>>>|<row|<cell|>|<cell|=>|<cell|n<frac|2<rsup|-n/2>|\<Gamma\><around*|(|n/2|)>><big|int><rsub|0><rsup|\<infty\>>y<rsup|<around*|(|n-2|)>/2-1>e<rsup|-y/2>d
+      y>>|<row|<cell|>|<cell|=>|<cell|n <frac|2<rsup|-n/2>|\<Gamma\><around*|(|n/2|)>>\<cdot\><frac|\<Gamma\><around*|(|<frac|n-2|2>|)>|2<rsup|-<around*|(|n-2|)>/2>>>>|<row|<cell|>|<cell|=>|<cell|<frac|n|n-2>>>>>>
+    </equation*>
+
+    where we used the formula <math|\<Gamma\><around*|(|\<alpha\>+1|)>=\<alpha\>\<Gamma\><around*|(|\<alpha\>|)>>.
+  </with>
 
   \ 
 
-  <with|font-series|bold|2.2> Let <math|X<rsub|1>,\<ldots\>,X<rsub|n>> are
-  iid obey Beta(3,2). Find the sampling distributions of
-  <math|X<rsub|<around*|(|1|)>>=min<around*|{|X<rsub|1>,\<ldots\>,X<rsub|n>|}>>
+  <with|font-series|bold|2.2> Let <math|X<rsub|1>,\<ldots\>,X<rsub|n><above|\<sim\>|iid>>Beta(3,2).
+  Find the sampling distributions of <math|X<rsub|<around*|(|1|)>>=min<around*|{|X<rsub|1>,\<ldots\>,X<rsub|n>|}>>
   and <math|X<rsub|<around*|(|n|)>>=max<around*|{|X<rsub|1>,\<ldots\>,X<rsub|n>|}>>.
 
   <\solution>
     \;
 
+    <\with|color|blue>
+      The pdf and cdf of <math|X> are given by
+
+      <\equation*>
+        <tabular|<tformat|<table|<row|<cell|f<around*|(|x|)>>|<cell|=>|<cell|<frac|1|B<around*|(|a,b|)>>x<rsup|a-1><around*|(|1-x|)><rsup|b-1>\<cdot\>I<rsub|<around*|(|0,1|)>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|\<Gamma\><around*|(|3+2|)>|\<Gamma\><around*|(|3|)>\<Gamma\><around*|(|2|)>>x<rsup|2><around*|(|1-x|)>\<cdot\>I<rsub|<around*|(|0,1|)>><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|12<around*|(|x<rsup|2>-x<rsup|3>|)>\<cdot\>I<rsub|<around*|(|0,1|)>><around*|(|x|)>>>>>>
+      </equation*>
+
+      and
+
+      <\equation*>
+        <tabular|<tformat|<table|<row|<cell|F<around*|(|x|)>>|<cell|=>|<cell|<around*|{|<tabular|<tformat|<table|<row|<cell|0,>|<cell|if<space|1em>x\<leqslant\>0,>>|<row|<cell|<big|int><rsub|0><rsup|x>f<around*|(|t|)>d
+        t,>|<cell|if<space|1em>0\<less\>x\<less\>1,>>|<row|<cell|1,>|<cell|if<space|1em>x\<geqslant\>1,>>>>>|\<nobracket\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|<tabular|<tformat|<table|<row|<cell|0>|<cell|,if<space|1em>x\<leqslant\>0>>|<row|<cell|4x<rsup|3>-3x<rsup|4>>|<cell|,if<space|1em>0\<less\>x\<less\>1,>>|<row|<cell|1>|<cell|,if<space|1em>x\<geqslant\>1.>>>>>|\<nobracket\>>>>>>>
+      </equation*>
+
+      <\equation*>
+        <tabular|<tformat|<table|<row|<cell|G<rsub|1><around*|(|x|)>>|<cell|=>|<cell|1-<around*|[|1-F<around*|(|x|)>|]><rsup|n>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|<tabular|<tformat|<table|<row|<cell|0>|<cell|,if<space|1em>x\<leqslant\>0,>>|<row|<cell|1-<around*|[|1-4x<rsup|3>+3x<rsup|4>|]><rsup|n>>|<cell|,if<space|1em>0\<less\>x\<less\>1,>>|<row|<cell|1>|<cell|,if<space|1em>x\<gtr\>=1.>>>>>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|>>|<row|<cell|g<rsub|1><around*|(|x|)>>|<cell|=>|<cell|n
+        f<around*|(|x|)><around*|[|1-F<around*|(|x|)>|]><rsup|n-1>>>|<row|<cell|>|<cell|=>|<cell|12
+        n<around*|(|x<rsup|2>-x<rsup|3>|)><around*|[|1-4x<rsup|3>+3x<rsup|4>|]><rsup|n-1>\<cdot\>I<rsub|<around*|(|0,1|)>><around*|(|x|)>.>>>>>
+        and
+      </equation*>
+
+      Similarly, the cdf and pdf of <math|X<rsub|<around*|(|n|)>>=max<around*|{|X<rsub|1>,X<rsub|2>,\<ldots\>,X<rsub|n>|}>>
+      are given by
+
+      \;
+    </with>
+
     The largest order statistic <math|X<rsub|<around*|(|n|)>>> is
 
     <\equation*>
-      <tabular|<tformat|<table|<row|<cell|G<rsub|n><around*|(|x|)>>|<cell|=>|<cell|F<rsup|n><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|<frac|B<around*|(|x;3,2|)>|B<around*|(|3,2|)>>|}><rsup|n>>>>>>
+      <tabular|<tformat|<cwith|3|5|1|-1|color|blue>|<table|<row|<cell|G<rsub|n><around*|(|x|)>>|<cell|=>|<cell|F<rsup|n><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|<with|color|magenta|<around*|{|<frac|B<around*|(|x;3,2|)>|B<around*|(|3,2|)>>|}><rsup|n>>>>|<row|<cell|>|<cell|=>|<cell|<around*|{|<tabular|<tformat|<table|<row|<cell|0>|<cell|,if
+      x\<leqslant\>0,>>|<row|<cell|<around*|(|4x<rsup|3>-3x<rsup|4>|)><rsup|n>>|<cell|,if
+      0 \<less\>x\<less\>1,>>|<row|<cell|1>|,if
+      x\<geqslant\>1.>>>>|\<nobracket\>>>>|<row|<cell|g<around*|(|x|)>>|<cell|=>|<cell|n
+      f<around*|(|x|)>F<rsup|n-1><around*|(|x|)>>>|<row|<cell|>|<cell|=>|<cell|12n<around*|(|x<rsup|2>-x<rsup|3>|)>\<cdot\><around*|(|4x<rsup|3>-3x<rsup|4>|)><rsup|n-1>\<cdot\>I<rsub|<around*|(|0,1|)>><around*|(|x|)>>>>>>
     </equation*>
 
-    The simallest order statistic <math|X<rsub|<around*|(|1|)>>>
+    <\with|color|red>
+      The simallest order statistic <math|X<rsub|<around*|(|1|)>>>
 
-    <\equation*>
-      <tabular|<tformat|<table|<row|<cell|G<rsub|1><around*|(|x|)>>|<cell|=>|<cell|1-<around*|{|1-F<around*|(|x|)>|}><rsup|n>>>|<row|<cell|>|<cell|=>|<cell|1-<around*|{|1-<frac|B<around*|(|x;3,2|)>|B<around*|(|3,2|)>>|}><rsup|n>>>>>>
-    </equation*>
+      <\equation*>
+        <tabular|<tformat|<table|<row|<cell|G<rsub|1><around*|(|x|)>>|<cell|=>|<cell|1-<around*|{|1-F<around*|(|x|)>|}><rsup|n>>>|<row|<cell|>|<cell|=>|<cell|1-<around*|{|1-<frac|B<around*|(|x;3,2|)>|B<around*|(|3,2|)>>|}><rsup|n>>>>>>
+      </equation*>
+    </with>
 
     \;
   </solution>
@@ -86,51 +144,96 @@
   zero elsewhere.
 
   <\enumerate-alpha>
-    <item>Show that <math|Z<rsub|1>=nX<rsub|<around*|(|1|)>>,Z<rsub|2>=<around*|(|n-1|)><around*|[|X<rsub|<around*|(|2|)>>-X<rsub|<around*|(|1|)>>|]>,Z<rsub|3>=<around*|(|n-2|)><around*|[|X<rsub|<around*|(|3|)>>-X<rsub|<around*|(|2|)>>|]>,\<ldots\>,Z<rsub|n>=X<rsub|<around*|(|n|)>>-X<rsub|<around*|(|n-1|)>>>
+    <item>Show that <math|Z<rsub|1>=n X<rsub|<around*|(|1|)>>,Z<rsub|2>=<around*|(|n-1|)><around*|[|X<rsub|<around*|(|2|)>>-X<rsub|<around*|(|1|)>>|]>,Z<rsub|3>=<around*|(|n-2|)><around*|[|X<rsub|<around*|(|3|)>>-X<rsub|<around*|(|2|)>>|]>,\<ldots\>,Z<rsub|n>=X<rsub|<around*|(|n|)>>-X<rsub|<around*|(|n-1|)>>>
     are independent and that each <math|Z<rsub|i>> has the exponential
     distribution.
 
     <\proof>
-      <math|Z<rsub|i>=<around*|(|n-<around*|(|i-1|)>|)><around*|[|X<rsub|i>-X<rsub|i-1>|]>>
+      <\with|color|red>
+        <math|Z<rsub|i>=<around*|(|n-<around*|(|i-1|)>|)><around*|[|X<rsub|i>-X<rsub|i-1>|]>>
 
-      The joint density of <math|X<rsub|<around*|(|i|)>>> and
-      <math|X<rsub|<around*|(|i-1|)>>> is
+        The joint density of <math|X<rsub|<around*|(|i|)>>> and
+        <math|X<rsub|<around*|(|i-1|)>>> is
 
-      <\equation*>
-        g<rsub|i-1,i><around*|(|x<rsub|<around*|(|i-1|)>>,x<rsub|<around*|(|i|)>>|)>=c\<cdot\>exp<around*|\<nobracket\>|<around*|{||\<nobracket\>>x<rsub|<around*|(|i-1|)>><rsup|1-i>+x<rsup|-i><rsub|<around*|(|i|)>>-<around*|(|n-i|)>x<rsub|<around*|(|i|)>>|}><around*|(|1-e<rsup|-x<rsub|<around*|(|i-1|)>>>|)><rsup|i-2>,
-      </equation*>
+        <\equation*>
+          g<rsub|i-1,i><around*|(|x<rsub|<around*|(|i-1|)>>,x<rsub|<around*|(|i|)>>|)>=c\<cdot\>exp<around*|\<nobracket\>|<around*|{||\<nobracket\>>x<rsub|<around*|(|i-1|)>><rsup|1-i>+x<rsup|-i><rsub|<around*|(|i|)>>-<around*|(|n-i|)>x<rsub|<around*|(|i|)>>|}><around*|(|1-e<rsup|-x<rsub|<around*|(|i-1|)>>>|)><rsup|i-2>,
+        </equation*>
 
-      where <math|0\<leqslant\>x<rsub|<around*|(|i-1|)>>\<leqslant\>x<rsub|<around*|(|i|)>>\<leqslant\>1>
-      and
+        where <math|0\<leqslant\>x<rsub|<around*|(|i-1|)>>\<leqslant\>x<rsub|<around*|(|i|)>>\<leqslant\>1>
+        and
 
-      <\equation*>
-        c<wide|=|^><frac|n!|<around*|(|i-2|)>!<around*|(|n-i|)>!>
-      </equation*>
+        <\equation*>
+          c<wide|=|^><frac|n!|<around*|(|i-2|)>!<around*|(|n-i|)>!>
+        </equation*>
 
-      Making the transormation <math|z=x<rsub|<around*|(|i|)>>-x<rsub|<around*|(|i-1|)>>>
-      and <math|x=x<rsub|<around*|(|i-1|)>>>, we have
+        Making the transormation <math|z=x<rsub|<around*|(|i|)>>-x<rsub|<around*|(|i-1|)>>>
+        and <math|x=x<rsub|<around*|(|i-1|)>>>, we have
 
-      <\equation*>
-        <tabular|<tformat|<table|<row|<cell|J<around*|(|z,x\<rightarrow\>x<rsub|<around*|(|i-1|)>>,x<rsub|<around*|(|i|)>>|)>>|<cell|=<around*|\||<frac|\<partial\><around*|(|z,x|)>|\<partial\><around*|(|x<rsub|<around*|(|i-1|)>>,x<rsub|<around*|(|i|)>>|)>>|\|>>>|<row|<cell|>|<cell|=det<around*|(|<tabular|<tformat|<table|<row|<cell|-1>|<cell|1>>|<row|<cell|1>|<cell|0>>>>>|)>=-1>>>>>
-      </equation*>
+        <\equation*>
+          <tabular|<tformat|<table|<row|<cell|J<around*|(|z,x\<rightarrow\>x<rsub|<around*|(|i-1|)>>,x<rsub|<around*|(|i|)>>|)>>|<cell|=<around*|\||<frac|\<partial\><around*|(|z,x|)>|\<partial\><around*|(|x<rsub|<around*|(|i-1|)>>,x<rsub|<around*|(|i|)>>|)>>|\|>>>|<row|<cell|>|<cell|=det<around*|(|<tabular|<tformat|<table|<row|<cell|-1>|<cell|1>>|<row|<cell|1>|<cell|0>>>>>|)>=-1>>>>>
+        </equation*>
 
-      Hence, the joint density of <math|Z=X<rsub|<around*|(|i|)>>-X<rsub|<around*|(|i-1|)>>>
-      and <math|X=X<rsub|<around*|(|i-1|)>>> is
+        Hence, the joint density of <math|Z=X<rsub|<around*|(|i|)>>-X<rsub|<around*|(|i-1|)>>>
+        and <math|X=X<rsub|<around*|(|i-1|)>>> is
 
-      <\equation*>
-        <tabular|<tformat|<table|<row|<cell|h<around*|(|z,x|)>>|<cell|=>|<cell|g<rsub|i-1,i><around*|(|x<rsub|<around*|(|i-1|)>>,x<rsub|<around*|(|i|)>>|)>/<around*|\||J<around*|(|z,x\<rightarrow\>x<rsub|<around*|(|i-1|)>>,x<rsub|<around*|(|i|)>>|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\>exp<around*|{|<around*|{||\<nobracket\>>x<rsub|<around*|(|i-1|)>><rsup|1-i>+x<rsup|-i><rsub|<around*|(|i|)>>-<around*|(|n-i|)>x<rsub|<around*|(|i|)>>|}><around*|(|1-e<rsup|-x<rsub|<around*|(|i-1|)>>>|)><rsup|i-2>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\>exp<around*|\<nobracket\>|<around*|{|x<rsup|1-i>+<around*|(|z+|\<nobracket\>>x|)><rsup|-i>-<around*|(|n-i|)><around*|(|z+x|)>|}><around*|(|1-e<rsup|-x>|)><rsup|i-2>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\>exp<around*|{|x<rsup|1-i>|}><around*|(|1-e<rsup|-x>|)><rsup|i-2>*\<cdot\>exp<around*|{|<around*|(|z+x|)><rsup|-i>-<around*|(|n-i|)><around*|(|z+x|)>|}>>>>>>
-      </equation*>
+        <\equation*>
+          <tabular|<tformat|<table|<row|<cell|h<around*|(|z,x|)>>|<cell|=>|<cell|g<rsub|i-1,i><around*|(|x<rsub|<around*|(|i-1|)>>,x<rsub|<around*|(|i|)>>|)>/<around*|\||J<around*|(|z,x\<rightarrow\>x<rsub|<around*|(|i-1|)>>,x<rsub|<around*|(|i|)>>|)>|\|>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\>exp<around*|{|<around*|{||\<nobracket\>>x<rsub|<around*|(|i-1|)>><rsup|1-i>+x<rsup|-i><rsub|<around*|(|i|)>>-<around*|(|n-i|)>x<rsub|<around*|(|i|)>>|}><around*|(|1-e<rsup|-x<rsub|<around*|(|i-1|)>>>|)><rsup|i-2>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\>exp<around*|\<nobracket\>|<around*|{|x<rsup|1-i>+<around*|(|z+|\<nobracket\>>x|)><rsup|-i>-<around*|(|n-i|)><around*|(|z+x|)>|}><around*|(|1-e<rsup|-x>|)><rsup|i-2>>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\>exp<around*|{|x<rsup|1-i>|}><around*|(|1-e<rsup|-x>|)><rsup|i-2>*\<cdot\>exp<around*|{|<around*|(|z+x|)><rsup|-i>-<around*|(|n-i|)><around*|(|z+x|)>|}>>>>>>
+        </equation*>
 
-      Where <math|0\<leqslant\>x\<leqslant\>\<infty\>>,<math|0\<leqslant\>z\<leqslant\>\<infty\>>,
-      and <math|0\<leqslant\>x+z\<leqslant\>\<infty\>.> The marginal density
-      of <math|Z=X<rsub|<around*|(|i|)>>-X<rsub|<around*|(|i-1|)>>> is given
-      by
+        Where <math|0\<leqslant\>x\<leqslant\>\<infty\>>,<math|0\<leqslant\>z\<leqslant\>\<infty\>>,
+        and <math|0\<leqslant\>x+z\<leqslant\>\<infty\>.> The marginal
+        density of <math|Z=X<rsub|<around*|(|i|)>>-X<rsub|<around*|(|i-1|)>>>
+        is given by
 
-      <\equation*>
-        <tabular|<tformat|<table|<row|<cell|h<around*|(|z|)>>|<cell|=>|<cell|<big|int><rsub|0><rsup|\<infty\>>h<around*|(|z,x|)>d
-        x>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\><big|int><rsub|0><rsup|\<infty\>>exp<around*|\<nobracket\>|<around*|{|x<rsup|1-i>+<around*|(|z+|\<nobracket\>>x|)><rsup|-i>-<around*|(|n-i|)><around*|(|z+x|)>|}><around*|(|1-e<rsup|-x>|)><rsup|i-2>d
-        x>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\>>>>>>
-      </equation*>
+        <\equation*>
+          <tabular|<tformat|<table|<row|<cell|h<around*|(|z|)>>|<cell|=>|<cell|<big|int><rsub|0><rsup|\<infty\>>h<around*|(|z,x|)>d
+          x>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\><big|int><rsub|0><rsup|\<infty\>>exp<around*|\<nobracket\>|<around*|{|x<rsup|1-i>+<around*|(|z+|\<nobracket\>>x|)><rsup|-i>-<around*|(|n-i|)><around*|(|z+x|)>|}><around*|(|1-e<rsup|-x>|)><rsup|i-2>d
+          x>>|<row|<cell|>|<cell|=>|<cell|c\<cdot\>>>>>>
+        </equation*>
+      </with>
+
+      <\with|color|blue>
+        The joint density of <math|Y<rsub|1>,\<ldots\>,Y<rsub|n>> is given by
+
+        <\equation*>
+          <tabular|<tformat|<table|<row|<cell|f<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>>|<cell|=>|<cell|n!f<around*|(|y<rsub|1>|)>\<ldots\>f<around*|(|y<rsub|n>|)>>>|<row|<cell|>|<cell|=>|<cell|n!e<rsup|-<big|sum><rsub|i=1><rsup|n>y<rsub|i>>,0\<less\>y<rsub|1>\<less\>\<cdots\>\<less\>y<rsub|n>.>>>>>
+        </equation*>
+
+        Taking the transformation
+
+        <\equation*>
+          <around*|{|<tabular|<tformat|<table|<row|<cell|z<rsub|1>>|<cell|=>|<cell|n
+          y<rsub|1>>>|<row|<cell|z<rsub|2>>|<cell|=>|<cell|<around*|(|n-1|)><around*|(|y<rsub|2>-y<rsub|1>|)>>>|<row|<cell|>|<cell|\<vdots\>>|<cell|>>|<row|<cell|z<rsub|n>>|<cell|=>|<cell|y<rsub|n>-y<rsub|n-1>>>>>>,|\<nobracket\>>
+        </equation*>
+
+        when have <math|z<rsub|i>\<gtr\>0> for <math|i=1,\<ldots\>,n>, and
+        the inverse transformation is given by
+
+        <\equation*>
+          <around*|{|<tabular|<tformat|<table|<row|<cell|y<rsub|1>>|<cell|=>|<cell|<frac|z<rsub|1>|n>>>|<row|<cell|y<rsub|2>>|<cell|=>|<cell|<frac|z<rsub|1>|n>+<frac|z<rsub|2>|n-1>>>|<row|<cell|>|<cell|\<vdots\>>|<cell|>>|<row|<cell|y<rsub|n>>|<cell|=>|<cell|<frac|z<rsub|1>|n>+<frac|z<rsub|2>|n-1>+\<ldots\>+z<rsub|n>>>>>>.|\<nobracket\>>
+        </equation*>
+
+        Since the Jacobian is
+
+        <\equation*>
+          J=<around*|\||<frac|\<partial\><around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)>|\<partial\><around*|(|z<rsub|1>,\<ldots\>,z<rsub|n>|)>>|\|>=<around*|\||<tabular|<tformat|<table|<row|<cell|<frac|1|n>>|<cell|0>|<cell|0>|<cell|\<ldots\>>|<cell|0>>|<row|<cell|<frac|1|n>>|<cell|<frac|1|n-1>>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|<frac|1|n>>|<cell|<frac|1|n-1>>|<cell|<frac|1|n-2>>|<cell|\<ldots\>>|<cell|1>>>>>|\|>=<frac|1|n!>,
+        </equation*>
+
+        the joint density of <math|Z<rsub|1><rsub|>,\<ldots\>,Z<rsub|n>> is
+
+        <\equation*>
+          <tabular|<tformat|<table|<row|<cell|g<around*|(|z<rsub|1>,\<ldots\>,z<rsub|n>|)>>|<cell|=>|<cell|f<around*|(|y<rsub|1>,\<ldots\>,y<rsub|n>|)><around*|\||J|\|>>>|<row|<cell|>|<cell|=>|<cell|e<rsup|-<big|sum><rsub|i=1><rsup|n>z<rsub|i>>,z<rsub|i>\<gtr\>0,i=1,\<ldots\>,n.>>>>>
+        </equation*>
+
+        Therefore, the marginal density of <math|Z<rsub|i>> is
+        Exponential(1). Further more, note that
+
+        <\equation*>
+          g<around*|(|z<rsub|1>,\<ldots\>,z<rsub|n>|)>=g<around*|(|z<rsub|1>|)>\<ldots\>g<around*|(|z<rsub|n>|)>,
+        </equation*>
+
+        the <math|Z<rsub|1>,\<ldots\>Z<rsub|n>> are mutually independent.
+      </with>
 
       \;
     </proof>
@@ -141,6 +244,17 @@
     can be expressed as linear functions of independent random variables.
 
     <with|font-series|bold|Solve:>
+
+    <\with|color|blue>
+      We can write
+
+      <\equation*>
+        <tabular|<tformat|<table|<row|<cell|<big|sum><rsub|i=1><rsup|n>a<rsub|i>Y<rsub|i>>|<cell|=>|<cell|<big|sum><rsub|i=1><rsup|n>a<rsub|i><around*|(|<big|sum><rsub|k=0><rsup|i-1><frac|Z<rsub|k+1>|n-k>|)>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|k=0><rsup|n-1><around*|(|<big|sum><rsub|i=k+1><rsup|n>a<rsub|i>|)><frac|Z<rsub|k+1>|n-k>>>|<row|<cell|>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|n><around*|(|<big|sum><rsub|i=j><rsup|n>a<rsub|i>|)><frac|Z<rsub|j>|n-j+1>,>>>>>
+      </equation*>
+
+      which is a linear function of independent random variables
+      <math|Z<rsub|1>,\<ldots\>,Z<rsub|n>>.
+    </with>
   </enumerate-alpha>
 
   <with|font-series|bold|2.4> Let <math|X<rsub|i>\<sim\>Gamma<around*|(|a<rsub|i>,1|)>,i=1,\<ldots\>\<ldots\>.n,>
@@ -226,16 +340,15 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-1|<tuple|?|1>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Part
-      I> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-1><vspace|0.5fn>
+      <with|par-left|<quote|1tab>|Part I <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-1>>
     </associate>
   </collection>
 </auxiliary>
