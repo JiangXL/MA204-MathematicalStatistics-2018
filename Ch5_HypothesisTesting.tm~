@@ -253,6 +253,8 @@
   <with|font-shape|italic|the uniformly most powerful test>(UMPT)
   \<#4E00\>\<#81F4\>\<#6700\>\<#4F18\>\<#68C0\>\<#9A8C\>
 
+  \;
+
   <math|p<around*|(|\<theta\>|)>=Pr<around*|(|rejecting
   H<rsub|0><around*|\||\<theta\>|\<nobracket\>>|)>=Pr<around*|(||)>>
 

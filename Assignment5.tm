@@ -223,7 +223,7 @@
       Then, the likehood funcition is\ 
 
       <\equation*>
-        L<around*|(|\<theta\>|)>=<big|prod><rsub|i=1><rsup|n>\<theta\><around*|(|1-x<rsub|i>|)><rsup|\<theta\>-1>=Q<rsup|n><around*|[|Q<around*|(|x|)>|]><rsup|\<theta\>-1>.
+        L<around*|(|\<theta\>|)>=<big|prod><rsub|i=1><rsup|n>\<theta\><around*|(|1-x<rsub|i>|)><rsup|\<theta\>-1>=\<theta\><rsup|n><around*|[|Q<around*|(|x|)>|]><rsup|\<theta\>-1>.
       </equation*>
 
       Note that
@@ -934,7 +934,6 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-2|<tuple|1|?>>
   </collection>
 </references>
 
