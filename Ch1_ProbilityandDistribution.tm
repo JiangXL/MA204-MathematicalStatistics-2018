@@ -1,6 +1,6 @@
-<TeXmacs|1.99.6>
+<TeXmacs|1.99.19>
 
-<style|generic>
+<style|<tuple|generic|old-spacing|old-dots|old-lengths>>
 
 <\body>
   <\dfn>
@@ -236,6 +236,8 @@
     X and Y are discete,>>|<row|<cell|<big|int><rsub|-\<infty\>><rsup|x><big|int><rsub|-\<infty\>><rsup|y>f<around*|(|x,y|)>d
     x d y>|<cell|,if X and Y are continuous.>>>>>|\<nobracket\>>>>>>>
   </equation*>
+
+  NOTE\<#FF1A\>\<#7269\>\<#7406\>\<#5B9E\>\<#9A8C\>\<#6D4B\>\<#91CF\>\<#8BEF\>\<#5DEE\>\<#4F20\>\<#9012\>\<#80FD\>\<#4ECE\>\<#8FD9\>\<#63A8\>\<#5417\>\<#FF1F\>
 
   <subsubsection|Marginal and conditional distributions>
 
@@ -475,21 +477,21 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|7|4>>
+    <associate|auto-10|<tuple|7|5>>
     <associate|auto-11|<tuple|8|5>>
     <associate|auto-12|<tuple|8.1|5>>
     <associate|auto-13|<tuple|8.2|5>>
     <associate|auto-14|<tuple|1|6>>
     <associate|auto-15|<tuple|8.3|6>>
     <associate|auto-16|<tuple|8.4|6>>
-    <associate|auto-17|<tuple|9|?>>
-    <associate|auto-18|<tuple|10|?>>
+    <associate|auto-17|<tuple|9|6>>
+    <associate|auto-18|<tuple|10|7>>
     <associate|auto-2|<tuple|2|1>>
     <associate|auto-3|<tuple|3|2>>
     <associate|auto-4|<tuple|4|2>>
-    <associate|auto-5|<tuple|5|2>>
+    <associate|auto-5|<tuple|5|3>>
     <associate|auto-6|<tuple|6|3>>
-    <associate|auto-7|<tuple|6.1|3>>
+    <associate|auto-7|<tuple|6.1|4>>
     <associate|auto-8|<tuple|6.2|4>>
     <associate|auto-9|<tuple|6.3|4>>
   </collection>
@@ -498,7 +500,7 @@
 <\auxiliary>
   <\collection>
     <\associate|figure>
-      <tuple|normal|<surround|<hidden|<tuple>>||The beta(left) and
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1>||The beta(left) and
       gamma(right) distribution with different parameter.>|<pageref|auto-14>>
     </associate>
     <\associate|toc>
@@ -554,13 +556,21 @@
       distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <with|par-left|<quote|1tab>|9<space|2spc>Inverse Byes Formulae
+      <with|par-left|<quote|2tab>|8.3<space|2spc>Categorical Distribution
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>>
 
+      <with|par-left|<quote|2tab>|8.4<space|2spc>Zero-inflated Possion
+      Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>>
+
+      <with|par-left|<quote|1tab>|9<space|2spc>Inverse Byes Formulae
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-17>>
+
       <with|par-left|<quote|1tab>|10<space|2spc>References
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16>>
+      <no-break><pageref|auto-18>>
     </associate>
   </collection>
 </auxiliary>
